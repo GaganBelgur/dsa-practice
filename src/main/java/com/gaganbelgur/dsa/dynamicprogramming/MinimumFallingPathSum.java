@@ -1,4 +1,4 @@
-package main.java.com.gagan.dsa.dynamicprogramming;
+package main.java.com.gaganbelgur.dsa.dynamicprogramming;
 
 /**
  * MinimumFallingPathSum
