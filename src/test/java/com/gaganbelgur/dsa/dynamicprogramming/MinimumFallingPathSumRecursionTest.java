@@ -6,7 +6,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class MinimumFallingPathSumTest {
+public class MinimumFallingPathSumRecursionTest {
 
     private final FallingPathSumSolverInterface solver = new MinimumFallingPathSumRecursion();
 
