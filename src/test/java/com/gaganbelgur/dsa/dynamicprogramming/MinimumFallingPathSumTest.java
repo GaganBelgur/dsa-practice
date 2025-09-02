@@ -1,11 +1,14 @@
 package test.java.com.gaganbelgur.dsa.dynamicprogramming;
 
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum.MinimumFallingPathSum;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum.FallingPathSumSolverInterface;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum.MinimumFallingPathSumRecursion;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class MinimumFallingPathSumTest {
+
+    private final FallingPathSumSolverInterface solver = new MinimumFallingPathSumRecursion();
 
     @Test
     public void GivenValidMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
@@ -15,7 +18,7 @@ public class MinimumFallingPathSumTest {
                 {1, 1, 20, 2},
                 {1, 2, 2, 1}
         };
-        assertEquals(6, MinimumFallingPathSum.minFallingPathSum(matrix));
+        assertEquals(6, solver.minFallingPathSum(matrix));
     }
 
     @Test
@@ -25,24 +28,24 @@ public class MinimumFallingPathSumTest {
                 {2, 3, -1, -1},
                 {1, 1, -1, 8}
         };
-        assertEquals(-1, MinimumFallingPathSum.minFallingPathSum(matrix));
+        assertEquals(-1, solver.minFallingPathSum(matrix));
     }
 
     @Test
     public void GivenEmptyMatrixWhenMinFallingPathSumIsInvokedThenNegativeResultShouldBeReceived() {
         int[][] matrix = {};
-        assertEquals(-1, MinimumFallingPathSum.minFallingPathSum(matrix));
+        assertEquals(-1, solver.minFallingPathSum(matrix));
     }
 
     @Test
     public void GivenSingleRowMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
         int[][] matrix = {{3, 5, 7}};
-        assertEquals(3, MinimumFallingPathSum.minFallingPathSum(matrix));
+        assertEquals(3, solver.minFallingPathSum(matrix));
     }
 
     @Test
     public void GivenSingleColumnMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
         int[][] matrix = {{3}, {5}, {7}};
-        assertEquals(15, MinimumFallingPathSum.minFallingPathSum(matrix));
+        assertEquals(15, solver.minFallingPathSum(matrix));
     }
 }

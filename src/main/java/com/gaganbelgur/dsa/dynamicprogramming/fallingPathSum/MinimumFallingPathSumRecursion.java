@@ -4,7 +4,7 @@ package main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum;
  * MinimumFallingPathSumRecursion
  * A class to compute the minimum falling path sum in a given matrix.
  */
-class MinimumFallingPathSumRecursion implements FallingPathSumSolverInterface {
+public class MinimumFallingPathSumRecursion implements FallingPathSumSolverInterface {
     /**
      * Finds the minimum falling path sum in the given matrix.
      *
