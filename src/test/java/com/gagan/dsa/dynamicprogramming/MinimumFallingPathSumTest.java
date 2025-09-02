@@ -1,0 +1,48 @@
+package test.java.com.gagan.dsa.dynamicprogramming;
+
+import main.java.com.gagan.dsa.dynamicprogramming.MinimumFallingPathSum;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
+public class MinimumFallingPathSumTest {
+
+    @Test
+    public void GivenValidMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
+        int[][] matrix = {
+                {1, 2, 10, 4},
+                {100, 3, 2, 1},
+                {1, 1, 20, 2},
+                {1, 2, 2, 1}
+        };
+        assertEquals(6, MinimumFallingPathSum.minFallingPathSum(matrix));
+    }
+
+    @Test
+    public void GivenMatrixWithNegativeElementsWhenMinFallingPathSumIsInvokedThenNegativeResultShouldBeReceived() {
+        int[][] matrix = {
+                {1, 4, 3, 1},
+                {2, 3, -1, -1},
+                {1, 1, -1, 8}
+        };
+        assertEquals(-1, MinimumFallingPathSum.minFallingPathSum(matrix));
+    }
+
+    @Test
+    public void GivenEmptyMatrixWhenMinFallingPathSumIsInvokedThenNegativeResultShouldBeReceived() {
+        int[][] matrix = {};
+        assertEquals(-1, MinimumFallingPathSum.minFallingPathSum(matrix));
+    }
+
+    @Test
+    public void GivenSingleRowMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
+        int[][] matrix = {{3, 5, 7}};
+        assertEquals(3, MinimumFallingPathSum.minFallingPathSum(matrix));
+    }
+
+    @Test
+    public void GivenSingleColumnMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
+        int[][] matrix = {{3}, {5}, {7}};
+        assertEquals(15, MinimumFallingPathSum.minFallingPathSum(matrix));
+    }
+}
