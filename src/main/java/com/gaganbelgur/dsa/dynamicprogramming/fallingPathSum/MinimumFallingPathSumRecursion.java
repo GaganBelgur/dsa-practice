@@ -1,23 +1,23 @@
-package main.java.com.gaganbelgur.dsa.dynamicprogramming;
+package main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum;
 
 /**
- * MinimumFallingPathSum
+ * MinimumFallingPathSumRecursion
  * A class to compute the minimum falling path sum in a given matrix.
  */
-public class MinimumFallingPathSum {
+class MinimumFallingPathSumRecursion implements FallingPathSumSolverInterface {
     /**
      * Finds the minimum falling path sum in the given matrix.
      *
      * @param matrix The input 2D Array
      * @return Minimum falling path sum, or -1 if no valid path exists
      */
-    public static int minFallingPathSum(int[][] matrix) {
+    @Override
+    public int minFallingPathSum(int[][] matrix) {
         if(matrix.length == 0) return -1;
 
         int minSum = Integer.MAX_VALUE;
         int rows = matrix.length;
         int columns = matrix[0].length;
-
 
         for (int col = 0; col < columns; col++) {
             int sum = minPathSum(matrix, 0, col, rows, columns);
@@ -35,7 +35,7 @@ public class MinimumFallingPathSum {
      * @param columns Total columns
      * @return Minimum Path sum
      */
-    private static int minPathSum(int[][] matrix, int row, int col, int rows, int columns) {
+    private int minPathSum(int[][] matrix, int row, int col, int rows, int columns) {
         if (col < 0 || col >= columns || row >= rows) return Integer.MAX_VALUE;
         if (row == rows - 1) return matrix[row][col];
 
@@ -47,16 +47,5 @@ public class MinimumFallingPathSum {
 
         if (bestMin == Integer.MAX_VALUE) return Integer.MAX_VALUE;
         else return matrix[row][col] + bestMin;
-    }
-
-    public static void main(String[] args) {
-        int[][] matrix = {
-                {1, 2, 10, 4},
-                {100, 3, 2, 1},
-                {1, 1, 20, 2},
-                {1, 2, 2, 1}
-        };
-
-        System.out.println("Minimum Falling Path Sum: " + minFallingPathSum(matrix));
     }
 }

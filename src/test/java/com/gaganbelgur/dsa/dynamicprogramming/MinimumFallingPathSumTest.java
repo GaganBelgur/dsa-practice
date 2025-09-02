@@ -1,6 +1,6 @@
 package test.java.com.gaganbelgur.dsa.dynamicprogramming;
 
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.MinimumFallingPathSum;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum.MinimumFallingPathSum;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
