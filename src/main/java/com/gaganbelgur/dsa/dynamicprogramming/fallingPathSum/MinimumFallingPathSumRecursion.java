@@ -27,7 +27,6 @@ public class MinimumFallingPathSumRecursion implements FallingPathSumSolverInter
     }
 
     /**
-     *
      * @param matrix The input 2D Array
      * @param row Current row index
      * @param col Current column index

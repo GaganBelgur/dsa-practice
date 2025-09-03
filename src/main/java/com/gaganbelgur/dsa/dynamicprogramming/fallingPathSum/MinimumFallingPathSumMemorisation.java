@@ -33,12 +33,12 @@ public class MinimumFallingPathSumMemorisation implements FallingPathSumSolverIn
     }
 
     /**
-     *
      * @param matrix The input 2D Array
      * @param row Current row index
      * @param col Current column index
      * @param rows Total rows
      * @param columns Total columns
+     * @param dp A 2D memoization table where dp[r][c] stores the minimum falling path sum starting from cell (r, c). Initialized with a default value (e.g., -1) to indicate non-computed states.
      * @return Minimum Path sum
      */
     private int minPathSum(int[][] matrix, int row, int col, int rows, int columns, int[][] dp) {
