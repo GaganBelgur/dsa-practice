@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum;
+package main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingpathsum;
 
 import java.util.Arrays;
 

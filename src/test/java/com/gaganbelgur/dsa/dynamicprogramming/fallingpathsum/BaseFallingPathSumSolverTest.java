@@ -1,14 +1,13 @@
-package test.java.com.gaganbelgur.dsa.dynamicprogramming;
+package test.java.com.gaganbelgur.dsa.dynamicprogramming.fallingpathsum;
 
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum.FallingPathSumSolverInterface;
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingPathSum.MinimumFallingPathSumRecursion;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.fallingpathsum.FallingPathSumSolverInterface;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class MinimumFallingPathSumRecursionTest {
+public abstract class BaseFallingPathSumSolverTest {
 
-    private final FallingPathSumSolverInterface solver = new MinimumFallingPathSumRecursion();
+    protected abstract FallingPathSumSolverInterface getSolver();
 
     @Test
     public void GivenValidMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
@@ -18,7 +17,7 @@ public class MinimumFallingPathSumRecursionTest {
                 {1, 1, 20, 2},
                 {1, 2, 2, 1}
         };
-        assertEquals(6, solver.minFallingPathSum(matrix));
+        assertEquals(6, getSolver().minFallingPathSum(matrix));
     }
 
     @Test
@@ -28,24 +27,24 @@ public class MinimumFallingPathSumRecursionTest {
                 {2, 3, -1, -1},
                 {1, 1, -1, 8}
         };
-        assertEquals(-1, solver.minFallingPathSum(matrix));
+        assertEquals(-1, getSolver().minFallingPathSum(matrix));
     }
 
     @Test
     public void GivenEmptyMatrixWhenMinFallingPathSumIsInvokedThenNegativeResultShouldBeReceived() {
         int[][] matrix = {};
-        assertEquals(-1, solver.minFallingPathSum(matrix));
+        assertEquals(-1, getSolver().minFallingPathSum(matrix));
     }
 
     @Test
     public void GivenSingleRowMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
         int[][] matrix = {{3, 5, 7}};
-        assertEquals(3, solver.minFallingPathSum(matrix));
+        assertEquals(3, getSolver().minFallingPathSum(matrix));
     }
 
     @Test
     public void GivenSingleColumnMatrixWhenMinFallingPathSumIsInvokedThenNonNegativeResultShouldBeReceived() {
         int[][] matrix = {{3}, {5}, {7}};
-        assertEquals(15, solver.minFallingPathSum(matrix));
+        assertEquals(15, getSolver().minFallingPathSum(matrix));
     }
 }
