@@ -68,9 +68,8 @@ public class MinimumFallingPathSumSpaceOptimization implements FallingPathSumSol
 
                 newDP[col] = matrix[row][col] + Math.min(down, Math.min(diagonalLeft, diagonalRight));
             }
-            dp = newDP.clone();
+            dp = newDP;
         }
-
         return dp;
     }
 
