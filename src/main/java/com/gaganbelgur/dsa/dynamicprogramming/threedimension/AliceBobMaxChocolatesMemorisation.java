@@ -6,7 +6,7 @@ public class AliceBobMaxChocolatesMemorisation implements ThreeDimensionDPProble
 
     @Override
     public int maxChocolates(int[][] matrix) {
-        if(matrix.length == 0 || matrix[0].length < 2) return -1;
+        if (matrix.length == 0 || matrix[0].length < 2) return -1;
 
         int rows = matrix.length;
         int columns = matrix[0].length;
@@ -33,25 +33,21 @@ public class AliceBobMaxChocolatesMemorisation implements ThreeDimensionDPProble
             }
         }
 
-        if(dp[row][j1][j2] != -1) return dp[row][j1][j2];
+        if (dp[row][j1][j2] != -1) return dp[row][j1][j2];
 
         int maxChocolates = 0;
 
         for (int dj1 = -1; dj1 <= 1; dj1++) {
             for (int dj2 = -1; dj2 <= 1; dj2++) {
+                int ans = findMaxChocolates(row + 1, j1 + dj1, j2 + dj2, rows, columns, matrix, dp);
+
                 if (j1 == j2) {
-                    maxChocolates =
-                            Math.max(
-                                    maxChocolates,
-                                    matrix[row][j1] + findMaxChocolates(row + 1, j1 + dj1, j2 + dj2, rows, columns, matrix, dp));
+                    ans += matrix[row][j1];
                 } else {
-                    maxChocolates =
-                            Math.max(
-                                    maxChocolates,
-                                    matrix[row][j1]
-                                            + matrix[row][j2]
-                                            + findMaxChocolates(row + 1, j1 + dj1, j2 + dj2, rows, columns, matrix, dp));
+                   ans += (matrix[row][j1] + matrix[row][j2]);
                 }
+
+                maxChocolates = Math.max(maxChocolates, ans);
             }
         }
 
