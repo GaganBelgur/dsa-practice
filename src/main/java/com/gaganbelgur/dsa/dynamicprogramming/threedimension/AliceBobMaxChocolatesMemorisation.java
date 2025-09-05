@@ -4,6 +4,11 @@ import java.util.Arrays;
 
 public class AliceBobMaxChocolatesMemorisation implements ThreeDimensionDPProblemSolver {
 
+    /**
+     * Allowed column movements per step: {-1, 0, 1} where -1 = move left, 0 = stay in the same column, +1 = move right
+     */
+    private static final int[] directions = {-1, 0, 1};
+
     @Override
     public int maxChocolates(int[][] matrix) {
         if (matrix.length == 0 || matrix[0].length < 2) return -1;
@@ -22,32 +27,37 @@ public class AliceBobMaxChocolatesMemorisation implements ThreeDimensionDPProble
         return findMaxChocolates(0, 0, columns - 1, rows, columns, matrix, dp);
     }
 
+    /**
+     * Finds maximum chocolates two players can collect starting from top row.
+     * Alice starts at (0,0), Bob starts at (0, columns-1).
+     * Both move down one row at a time and can shift left, down, or right.
+     * If both land on the same cell, chocolate is counted only once.
+     *
+     * @param row Current row index
+     * @param j1  Alice's column position
+     * @param j2  Bob's column position
+     * @param rows Total number of rows
+     * @param columns Total number of columns
+     * @param matrix The grid of chocolates
+     * @param dp Memoization table (3D: row × j1 × j2)
+     * @return Maximum chocolates collectible from this state
+     */
     private int findMaxChocolates(int row, int j1, int j2, int rows, int columns, int[][] matrix, int[][][] dp) {
         if (j1 < 0 || j1 >= columns || j2 < 0 || j2 >= columns) return Integer.MIN_VALUE;
 
         if (row == rows - 1) {
-            if (j1 == j2) {
-                return matrix[row][j1];
-            } else {
-                return matrix[row][j1] + matrix[row][j2];
-            }
+            return (j1 == j2) ? matrix[row][j1] : matrix[row][j1] + matrix[row][j2];
         }
 
         if (dp[row][j1][j2] != -1) return dp[row][j1][j2];
 
         int maxChocolates = 0;
 
-        for (int dj1 = -1; dj1 <= 1; dj1++) {
-            for (int dj2 = -1; dj2 <= 1; dj2++) {
-                int ans = findMaxChocolates(row + 1, j1 + dj1, j2 + dj2, rows, columns, matrix, dp);
-
-                if (j1 == j2) {
-                    ans += matrix[row][j1];
-                } else {
-                   ans += (matrix[row][j1] + matrix[row][j2]);
-                }
-
-                maxChocolates = Math.max(maxChocolates, ans);
+        for (int dj1: directions) {
+            for (int dj2: directions) {
+                int next = findMaxChocolates(row + 1, j1 + dj1, j2 + dj2, rows, columns, matrix, dp);
+                int current = (j1 == j2) ? matrix[row][j1] : matrix[row][j1] + matrix[row][j2];
+                maxChocolates = Math.max(maxChocolates, next + current);
             }
         }
 
