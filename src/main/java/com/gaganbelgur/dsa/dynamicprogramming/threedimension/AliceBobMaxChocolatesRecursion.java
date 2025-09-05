@@ -15,30 +15,16 @@ public class AliceBobMaxChocolatesRecursion implements ThreeDimensionDPProblemSo
         if (j1 < 0 || j1 >= columns || j2 < 0 || j2 >= columns) return Integer.MIN_VALUE;
 
         if (row == rows - 1) {
-            if (j1 == j2) {
-                return matrix[row][j1];
-            } else {
-                return matrix[row][j1] + matrix[row][j2];
-            }
+            return (j1 == j2) ? matrix[row][j1] : matrix[row][j1] + matrix[row][j2];
         }
 
         int maxChocolates = 0;
 
-        for (int dj1 = -1; dj1 <= 1; dj1++) {
-            for (int dj2 = -1; dj2 <= 1; dj2++) {
-                if (j1 == j2) {
-                    maxChocolates =
-                            Math.max(
-                                    maxChocolates,
-                                    matrix[row][j1] + findMaxChocolates(row + 1, j1 + dj1, j2 + dj2, rows, columns, matrix));
-                } else {
-                    maxChocolates =
-                            Math.max(
-                                    maxChocolates,
-                                    matrix[row][j1]
-                                            + matrix[row][j2]
-                                            + findMaxChocolates(row + 1, j1 + dj1, j2 + dj2, rows, columns, matrix));
-                }
+        for (int dj1: directions) {
+            for (int dj2: directions) {
+                int next = findMaxChocolates(row + 1, j1 + dj1, j2 + dj2, rows, columns, matrix);
+                int current = (j1 == j2) ? matrix[row][j1] : matrix[row][j1] + matrix[row][j2];
+                maxChocolates = Math.max(maxChocolates, next + current);
             }
         }
         return maxChocolates;

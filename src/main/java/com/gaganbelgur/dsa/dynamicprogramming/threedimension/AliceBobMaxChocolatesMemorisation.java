@@ -4,11 +4,6 @@ import java.util.Arrays;
 
 public class AliceBobMaxChocolatesMemorisation implements ThreeDimensionDPProblemSolver {
 
-    /**
-     * Allowed column movements per step: {-1, 0, 1} where -1 = move left, 0 = stay in the same column, +1 = move right
-     */
-    private static final int[] directions = {-1, 0, 1};
-
     @Override
     public int maxChocolates(int[][] matrix) {
         if (matrix.length == 0 || matrix[0].length < 2) return -1;
