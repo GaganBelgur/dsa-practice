@@ -1,6 +1,6 @@
 package main.java.com.gaganbelgur.dsa.dynamicprogramming.threedimension;
 
-public class AliceBobMaxChocolatesRecursion implements ThreeDimensionDPProblemSolver {
+public class AliceBobChocolatesSolverRecursion implements AliceBobChocolatesSolver {
 
     @Override
     public int maxChocolates(int[][] matrix) {

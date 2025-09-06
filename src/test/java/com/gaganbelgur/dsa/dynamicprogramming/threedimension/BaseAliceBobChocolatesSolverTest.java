@@ -1,13 +1,13 @@
 package test.java.com.gaganbelgur.dsa.dynamicprogramming.threedimension;
 
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.threedimension.ThreeDimensionDPProblemSolver;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.threedimension.AliceBobChocolatesSolver;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public abstract class BaseThreeDimensionsTests {
+public abstract class BaseAliceBobChocolatesSolverTest {
 
-    protected abstract ThreeDimensionDPProblemSolver getSolver();
+    protected abstract AliceBobChocolatesSolver getSolver();
 
     @Test
     public void GivenValidMatrixWhenCalculateMaxChocolatesMethodIsInvokedThenPositiveValueIsReturned() {

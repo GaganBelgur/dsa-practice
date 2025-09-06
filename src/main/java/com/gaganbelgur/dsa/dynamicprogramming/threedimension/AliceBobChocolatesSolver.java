@@ -1,6 +1,6 @@
 package main.java.com.gaganbelgur.dsa.dynamicprogramming.threedimension;
 
-public interface ThreeDimensionDPProblemSolver {
+public interface AliceBobChocolatesSolver {
 
     /**
      * Allowed column movements per step: {-1, 0, 1} where -1 = move left, 0 = stay in the same column, +1 = move right

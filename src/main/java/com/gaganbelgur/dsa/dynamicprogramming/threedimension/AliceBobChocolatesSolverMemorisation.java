@@ -2,7 +2,7 @@ package main.java.com.gaganbelgur.dsa.dynamicprogramming.threedimension;
 
 import java.util.Arrays;
 
-public class AliceBobMaxChocolatesMemorisation implements ThreeDimensionDPProblemSolver {
+public class AliceBobChocolatesSolverMemorisation implements AliceBobChocolatesSolver {
 
     @Override
     public int maxChocolates(int[][] matrix) {
