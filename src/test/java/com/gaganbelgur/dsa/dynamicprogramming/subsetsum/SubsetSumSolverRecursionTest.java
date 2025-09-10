@@ -5,8 +5,10 @@ import main.java.com.gaganbelgur.dsa.dynamicprogramming.subsequence.SubsetSumSol
 
 public class SubsetSumSolverRecursionTest extends BaseSubsetSumSolverTest {
 
+    private final SubsetSumSolverInterface solver = new SubsetSumSolverRecursion();
+
     @Override
     protected SubsetSumSolverInterface getSolver() {
-        return new SubsetSumSolverRecursion();
+        return solver;
     }
 }
