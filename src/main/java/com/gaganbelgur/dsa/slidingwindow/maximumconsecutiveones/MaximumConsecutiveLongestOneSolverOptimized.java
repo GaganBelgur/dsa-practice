@@ -1,10 +1,12 @@
 package main.java.com.gaganbelgur.dsa.slidingwindow.maximumconsecutiveones;
 
 public class MaximumConsecutiveLongestOneSolverOptimized implements MaximumConsecutiveLongestOneSolverInterface {
+
     @Override
     public int longestOnes(int[] nums, int k) {
         int n=nums.length;
-        if(n == 0) return -1;
+        if(n == 0 || n <= k) return -1;
+
         return getLongestOnesAtMostKZeroFlips(nums, k, n);
     }
 
