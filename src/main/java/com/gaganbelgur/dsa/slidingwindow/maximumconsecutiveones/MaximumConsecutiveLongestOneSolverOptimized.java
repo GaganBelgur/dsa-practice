@@ -1,4 +1,4 @@
-package test.java.com.gaganbelgur.dsa.slidingwindow.maximumconsecutiveones;
+package main.java.com.gaganbelgur.dsa.slidingwindow.maximumconsecutiveones;
 
 public class MaximumConsecutiveLongestOneSolverOptimized implements MaximumConsecutiveLongestOneSolverInterface {
     @Override
