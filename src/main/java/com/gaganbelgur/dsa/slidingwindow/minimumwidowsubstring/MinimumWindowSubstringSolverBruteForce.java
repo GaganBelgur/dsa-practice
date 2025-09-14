@@ -12,10 +12,10 @@ public class MinimumWindowSubstringSolverBruteForce implements MinimumWindowSubs
 
         if (sLength == 0 || tLength == 0 || sLength < tLength) return "";
 
-        return minWindow(s, t, sLength, tLength);
+        return minWindow(s, t, sLength);
     }
 
-    private String minWindow(String s, String t, int sLength, int tLength) {
+    private String minWindow(String s, String t, int sLength) {
         Map<Character, Integer> frequencyMap = new HashMap<>();
         Map<Character, Integer> windowMap = new HashMap<>();
 
