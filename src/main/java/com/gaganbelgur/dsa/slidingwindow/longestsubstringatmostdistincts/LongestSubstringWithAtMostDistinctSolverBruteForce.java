@@ -3,8 +3,9 @@ package main.java.com.gaganbelgur.dsa.slidingwindow.longestsubstringatmostdistin
 import java.util.HashMap;
 import java.util.Map;
 
-public class LongestSubstringWithAtMostDistinctSolverBruteForce {
+public class LongestSubstringWithAtMostDistinctSolverBruteForce implements LongestSubstringWithAtMostDistinctSolverInterface {
 
+    @Override
     public int lengthOfLongestSubstringTwoDistinct(String s) {
         if(s.isEmpty()) return 0;
 
