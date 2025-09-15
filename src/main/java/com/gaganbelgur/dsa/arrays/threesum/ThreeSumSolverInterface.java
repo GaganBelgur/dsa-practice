@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.arrays;
+package main.java.com.gaganbelgur.dsa.arrays.threesum;
 
 import java.util.List;
 
