@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.binarysearch;
+package main.java.com.gaganbelgur.dsa.binarysearch.searchelement;
 
 public interface SearchTargetInTwoDimensionMatrixSolverInterface {
 
