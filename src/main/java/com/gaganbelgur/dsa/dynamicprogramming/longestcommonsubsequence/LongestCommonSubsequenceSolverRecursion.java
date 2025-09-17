@@ -4,13 +4,13 @@ public class LongestCommonSubsequenceSolverRecursion implements LongestCommonSub
 
     @Override
     public int lcs(String str1, String str2) {
-        return lcs(str1, str2);
+        return findLCS(str1, str2, 0, 0);
     }
 
     private int findLCS(String str1, String str2, int index1, int index2) {
         if (index1 < 0 || index2 < 0) return 0;
 
-        int ans = 0;
+        int ans;
         if (str1.charAt(index1) == str2.charAt(index2)) {
             ans = 1 + findLCS(str1, str2, index1 - 1, index2 - 1);
         } else {
