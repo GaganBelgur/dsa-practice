@@ -14,7 +14,7 @@ public class FindMissingAndRepeatedNumberSolverOptimizedApproach implements Find
 
         for (long num : nums) {
             sumOfArrayNumbers += num;
-            sumOfSquareOfArrayNumbers += (long) (num * num);
+            sumOfSquareOfArrayNumbers += num * num;
         }
 
         long diff = sumOfArrayNumbers - sumOfNaturalNumbers;
