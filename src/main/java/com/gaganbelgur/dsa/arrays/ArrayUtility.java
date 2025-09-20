@@ -2,7 +2,7 @@ package main.java.com.gaganbelgur.dsa.arrays;
 
 public class ArrayUtility {
 
-    private void reverseArray(int[] inputArray, int n) {
+    private void reverseArrayInternal(int[] inputArray, int n) {
         int left = 0;
         int right = n - 1;
 
@@ -25,7 +25,7 @@ public class ArrayUtility {
         int n = inputArray.length;
         if(n <= 1) return;
 
-        reverseArray(inputArray, n);
+        reverseArrayInternal(inputArray, n);
     }
 }
 
