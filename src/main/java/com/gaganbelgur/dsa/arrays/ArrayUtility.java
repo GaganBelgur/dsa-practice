@@ -7,17 +7,24 @@ public class ArrayUtility {
         int right = n - 1;
 
         while(left < right) {
-            int temp = inputArray[left];
-            inputArray[left] = inputArray[right];
-            inputArray[right] = temp;
+            swapElements(inputArray, left, right);
             left++;
             right--;
         }
     }
 
+    private void swapElements(int[] inputArray, int left, int right) {
+        int temp = inputArray[left];
+        inputArray[left] = inputArray[right];
+        inputArray[right] = temp;
+    }
+
     public void reverseArray(int[] inputArray) {
+        if(inputArray == null) return;
+
         int n = inputArray.length;
         if(n <= 1) return;
+
         reverseArray(inputArray, n);
     }
 }
