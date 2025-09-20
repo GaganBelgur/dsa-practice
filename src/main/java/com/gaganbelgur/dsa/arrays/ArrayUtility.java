@@ -2,14 +2,11 @@ package main.java.com.gaganbelgur.dsa.arrays;
 
 public class ArrayUtility {
 
-    private void reverseArrayInternal(int[] inputArray, int n) {
-        int left = 0;
-        int right = n - 1;
-
-        while(left < right) {
-            swapElements(inputArray, left, right);
-            left++;
-            right--;
+    private void reverseArrayInternal(int[] inputArray, int start, int end) {
+        while(start < end) {
+            swapElements(inputArray, start, end);
+            start++;
+            end--;
         }
     }
 
@@ -25,7 +22,16 @@ public class ArrayUtility {
         int n = inputArray.length;
         if(n <= 1) return;
 
-        reverseArrayInternal(inputArray, n);
+        reverseArrayInternal(inputArray, 0, n-1);
+    }
+
+    public void reverseSubArray(int[] inputArray, int start, int end) {
+        if(inputArray == null) return;
+
+        int n = inputArray.length;
+        if(n <= 1) return;
+
+        reverseArrayInternal(inputArray, start, end);
     }
 }
 

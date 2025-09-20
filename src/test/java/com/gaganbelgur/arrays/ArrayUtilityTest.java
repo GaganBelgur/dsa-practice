@@ -67,4 +67,14 @@ public class ArrayUtilityTest {
 
         Assert.assertArrayEquals(expected, mixedInput);
     }
+
+    @Test
+    public void testReverseSubArrayNumbers() {
+        int[] mixedInput = {1, 2, 3, 4};
+        int[] expected = {1, 3, 2, 4};
+
+        arrayUtility.reverseSubArray(mixedInput, 1, 2);
+
+        Assert.assertArrayEquals(expected, mixedInput);
+    }
 }
