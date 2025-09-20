@@ -19,7 +19,14 @@ public class ArrayUtility {
     }
 
     public void rotateArray(int[] inputArray, int k) {
+        int n = getInputArrayLength(inputArray);
+        if(n <= 1) return;
 
+        k = k % n;
+
+        reverseArrayInternal(inputArray, 0, n-1);
+        reverseArrayInternal(inputArray, 0, k - 1);
+        reverseArrayInternal(inputArray, k, n-1);
     }
 
     private void reverseArrayInternal(int[] inputArray, int start, int end) {

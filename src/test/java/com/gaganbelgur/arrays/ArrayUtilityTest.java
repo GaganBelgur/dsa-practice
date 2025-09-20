@@ -88,4 +88,14 @@ public class ArrayUtilityTest {
         Assert.assertArrayEquals(expected, mixedInput);
     }
 
+    @Test
+    public void testMixedRotateArraysNumbers() {
+        int[] actual = {10, -5, 0, 7};
+        int[] expected = {0, 7, 10, -5};
+
+        arrayUtility.rotateArray(actual, 2);
+
+        Assert.assertArrayEquals(expected, actual);
+    }
+
 }
