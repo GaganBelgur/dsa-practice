@@ -1,6 +1,26 @@
 package main.java.com.gaganbelgur.dsa.arrays;
 
+import main.java.com.gaganbelgur.dsa.utils.InvalidIndexException;
+
 public class ArrayUtility {
+
+    public void reverseArray(int[] inputArray) {
+        int n = getInputArrayLength(inputArray);
+        if(n <= 1) return;
+
+        reverseArrayInternal(inputArray, 0, n-1);
+    }
+
+    public void reverseSubArray(int[] inputArray, int start, int end) throws InvalidIndexException {
+        int n = getInputArrayLength(inputArray);
+        if(n <= 1) return;
+        if(!isValidStartEndIndex(n, start, end)) throw new InvalidIndexException("Invalid Start or End Index");
+        reverseArrayInternal(inputArray, start, end);
+    }
+
+    public void rotateArray(int[] inputArray, int k) {
+
+    }
 
     private void reverseArrayInternal(int[] inputArray, int start, int end) {
         while(start < end) {
@@ -16,22 +36,14 @@ public class ArrayUtility {
         inputArray[right] = temp;
     }
 
-    public void reverseArray(int[] inputArray) {
-        if(inputArray == null) return;
+    private int getInputArrayLength(int[] inputArray) {
+        if(inputArray == null) return -1;
 
-        int n = inputArray.length;
-        if(n <= 1) return;
-
-        reverseArrayInternal(inputArray, 0, n-1);
+        return inputArray.length;
     }
 
-    public void reverseSubArray(int[] inputArray, int start, int end) {
-        if(inputArray == null) return;
-
-        int n = inputArray.length;
-        if(n <= 1) return;
-
-        reverseArrayInternal(inputArray, start, end);
+    private boolean isValidStartEndIndex(int n, int start, int end) {
+        return start >= 0 && start <= n - 1 && start <= end && end <= n - 1;
     }
 }
 
