@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.binarysearch.searchelement;
+package main.java.com.gaganbelgur.dsa.binarysearch.searchelementtwodimension;
 
 public class SearchTargetInTwoDimensionMatrixSolverApproachOne implements SearchTargetInTwoDimensionMatrixSolverInterface {
 
