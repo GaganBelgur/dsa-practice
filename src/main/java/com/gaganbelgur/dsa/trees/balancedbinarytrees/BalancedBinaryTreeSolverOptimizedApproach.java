@@ -1,5 +1,7 @@
 package main.java.com.gaganbelgur.dsa.trees.balancedbinarytrees;
 
+import main.java.com.gaganbelgur.dsa.trees.TreeNode;
+
 public class BalancedBinaryTreeSolverOptimizedApproach implements BalancedBinaryTreeSolverInterface {
 
     @Override
