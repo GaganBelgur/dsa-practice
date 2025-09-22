@@ -12,10 +12,10 @@ public class BalancedBinaryTreeSolverOptimizedApproach implements BalancedBinary
     private int dfsHeight(TreeNode node) {
         if(node == null) return 0;
 
-        int leftHeight = dfsHeight(node.left);
+        int leftHeight = dfsHeight(node.getLeft());
         if(leftHeight == -1) return -1;
 
-        int rightHeight = dfsHeight(node.right);
+        int rightHeight = dfsHeight(node.getRight());
         if(rightHeight == -1) return -1;
 
         if(Math.abs(leftHeight - rightHeight) > 1) return -1;
