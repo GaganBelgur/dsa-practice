@@ -11,6 +11,15 @@ public class LinkedListOperations implements InsertOperations {
 
     @Override
     public ListNode insertAtTail(ListNode head, int data) {
-        return null;
+        ListNode newNode = new ListNode(data);
+        if(head == null) {
+            return newNode;
+        }
+        ListNode temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+        return head;
     }
 }
