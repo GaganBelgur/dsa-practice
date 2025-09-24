@@ -1,9 +1,10 @@
 package main.java.com.gaganbelgur.dsa.linkedlist;
 
-public class LinkedListOperations {
+public class LinkedListOperations implements InsertOperations {
 
-    public ListNode insertAtHead(ListNode head, int X) {
-        ListNode node = new ListNode(X);
+    @Override
+    public ListNode insertAtHead(ListNode head, int data) {
+        ListNode node = new ListNode(data);
         node.next = head;
         return node;
     }
