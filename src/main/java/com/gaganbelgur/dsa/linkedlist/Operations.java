@@ -1,0 +1,4 @@
+package main.java.com.gaganbelgur.dsa.linkedlist;
+
+public interface Operations {
+}
