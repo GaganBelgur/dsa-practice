@@ -9,4 +9,8 @@ public class LinkedListOperations implements InsertOperations {
         return node;
     }
 
+    @Override
+    public ListNode insertAtTail(ListNode head, int data) {
+        return null;
+    }
 }
