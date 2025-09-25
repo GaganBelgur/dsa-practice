@@ -1,6 +1,6 @@
 package main.java.com.gaganbelgur.dsa.linkedlist;
 
-public class LinkedListOperations implements InsertOperations {
+public class InsertOperationsImpl implements InsertOperations {
 
     @Override
     public ListNode insertAtHead(ListNode head, int data) {
