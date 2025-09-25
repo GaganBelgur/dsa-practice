@@ -1,6 +1,6 @@
 package main.java.com.gaganbelgur.dsa.linkedlist;
 
-public interface DeleteOperations {
+public interface DeleteOperations extends Operations {
 
     ListNode deleteHead(ListNode head);
 
