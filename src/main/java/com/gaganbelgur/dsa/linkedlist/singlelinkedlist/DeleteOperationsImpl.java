@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.linkedlist;
+package main.java.com.gaganbelgur.dsa.linkedlist.singlelinkedlist;
 
 public class DeleteOperationsImpl implements DeleteOperations {
 
