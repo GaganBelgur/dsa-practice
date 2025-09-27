@@ -1,21 +1,21 @@
 package main.java.com.gaganbelgur.dsa.linkedlist.singlelinkedlist;
 
-public class ListNode {
+public class SingleLinkedListNode {
 
     int val;
-    ListNode next;
+    SingleLinkedListNode next;
 
-    ListNode() {
+    SingleLinkedListNode() {
         val = 0;
         next = null;
     }
 
-    ListNode(int data) {
+    SingleLinkedListNode(int data) {
         val = data;
         next = null;
     }
 
-    ListNode(int data, ListNode next) {
+    SingleLinkedListNode(int data, SingleLinkedListNode next) {
         val = data;
         this.next = next;
     }
