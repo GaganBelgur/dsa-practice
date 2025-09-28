@@ -10,4 +10,14 @@ public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperation
         return temp;
     }
 
+    @Override
+    public DoubleLinkedListNode deleteHead(DoubleLinkedListNode head) {
+        if(head == null ||head.getNext() == null) return null;
+
+        DoubleLinkedListNode temp = head;
+        head = head.getNext();
+        head.setNext(null);
+        temp.setNext(null);
+        return head;
+    }
 }
