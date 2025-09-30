@@ -11,6 +11,7 @@ public class GenerateSubsequenceSolverRecursiveApproach implements GenerateSubse
         generateSubsets(nums, 0, new ArrayList<>(), result);
         return result;
     }
+
     private void generateSubsets(int[] nums, int index, List<Integer> current, List<List<Integer>> result) {
         if (index == nums.length) {
             result.add(new ArrayList<>(current));
