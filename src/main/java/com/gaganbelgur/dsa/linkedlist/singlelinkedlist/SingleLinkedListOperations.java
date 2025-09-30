@@ -15,4 +15,6 @@ public interface SingleLinkedListOperations {
     boolean searchKeyRecursive(SingleLinkedListNode head, int key);
 
     int getLength(SingleLinkedListNode head);
+
+    SingleLinkedListNode middleOfLinkedList(SingleLinkedListNode head);
 }

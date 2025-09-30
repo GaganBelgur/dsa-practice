@@ -66,4 +66,17 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         }
         return count;
     }
+
+    @Override
+    public SingleLinkedListNode middleOfLinkedList(SingleLinkedListNode head) {
+        SingleLinkedListNode fastPointer = head;
+        SingleLinkedListNode slowPointer = head;
+
+        while(fastPointer != null && fastPointer.next != null) {
+            fastPointer = fastPointer.next.next;
+            slowPointer = slowPointer.next;
+        }
+
+        return slowPointer;
+    }
 }
