@@ -1,4 +1,4 @@
-package test.java.com.gaganbelgur.arrays;
+package test.java.com.gaganbelgur.dsa.arrays;
 
 import main.java.com.gaganbelgur.dsa.arrays.ArrayUtility;
 import org.junit.Assert;
