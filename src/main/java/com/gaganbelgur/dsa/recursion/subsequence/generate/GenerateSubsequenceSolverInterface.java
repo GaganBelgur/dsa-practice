@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.recursion.subsequence;
+package main.java.com.gaganbelgur.dsa.recursion.subsequence.generate;
 
 import java.util.List;
 
