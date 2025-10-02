@@ -9,11 +9,7 @@ public class CountSubSequenceWithTargetSumSolverImpl implements CountSubSequence
 
     private int subsequencesCountWithTargetSum(int[] nums, int k, int index, int sum) {
         if(index == nums.length) {
-            if(k == sum) {
-                return 1;
-            } else {
-                return 0;
-            }
+            return (sum == k) ? 1 : 0;
         }
 
         sum += nums[index];
