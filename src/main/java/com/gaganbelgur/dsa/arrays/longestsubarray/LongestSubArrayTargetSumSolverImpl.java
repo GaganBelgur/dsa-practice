@@ -29,7 +29,7 @@ public class LongestSubArrayTargetSumSolverImpl implements LongestSubArrayTarget
                 maxLen = Math.max(maxLen, i - map.get(sum - k));
             }
 
-            map.put(sum, i);
+            map.putIfAbsent(sum, i);
         }
         return maxLen;
     }
