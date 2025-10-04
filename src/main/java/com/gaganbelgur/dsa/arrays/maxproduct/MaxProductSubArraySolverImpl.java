@@ -4,11 +4,15 @@ public class MaxProductSubArraySolverImpl implements MaxProductSubArraySolverInt
 
     @Override
     public int maxProduct(int[] nums) {
-        if (nums.length == 0) return 0;
-        if (nums.length == 1) return nums[0];
-
-        int maxProduct = 0;
         int n = nums.length;
+        if (n == 0) return 0;
+        if (n == 1) return nums[0];
+
+        return maxProduct(nums, n);
+    }
+
+    private int maxProduct(int[] nums, int n) {
+        int maxProduct = 0;
 
         for (int i = 0; i < n; i++) {
             int product = nums[i];
