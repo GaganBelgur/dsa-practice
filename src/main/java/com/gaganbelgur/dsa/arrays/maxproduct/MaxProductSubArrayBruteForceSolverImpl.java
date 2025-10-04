@@ -1,6 +1,6 @@
 package main.java.com.gaganbelgur.dsa.arrays.maxproduct;
 
-public class MaxProductSubArraySolverImpl implements MaxProductSubArraySolverInterface {
+public class MaxProductSubArrayBruteForceSolverImpl implements MaxProductSubArraySolverInterface {
 
     @Override
     public int maxProduct(int[] nums) {
