@@ -3,7 +3,7 @@ package main.java.com.gaganbelgur.dsa.recursion.subsequence.combinationsum;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CombinationSumSolverImpl implements CombinationSumSolver {
+public class CombinationSumSolverImpl implements CombinationSumSolverInterface {
 
     @Override
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
