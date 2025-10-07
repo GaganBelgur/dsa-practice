@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.recursion.subsequence.targetsum;
+package main.java.com.gaganbelgur.dsa.recursion.subsequence.combinationsum;
 
 import java.util.List;
 
