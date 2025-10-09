@@ -17,4 +17,7 @@ public interface SingleLinkedListOperations {
     int getLength(SingleLinkedListNode head);
 
     SingleLinkedListNode middleOfLinkedList(SingleLinkedListNode head);
+
+    SingleLinkedListNode reverseLinkedListRecursively(SingleLinkedListNode head);
+
 }

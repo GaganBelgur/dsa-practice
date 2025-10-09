@@ -79,4 +79,18 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
         return slowPointer;
     }
+
+    @Override
+    public SingleLinkedListNode reverseLinkedListRecursively(SingleLinkedListNode head) {
+        return reverseRecursively(null, head);
+    }
+
+    private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
+        if(current == null) return prev;
+
+        SingleLinkedListNode next = current.next;
+        current.next = prev;
+
+        return reverseRecursively(current, next);
+    }
 }
