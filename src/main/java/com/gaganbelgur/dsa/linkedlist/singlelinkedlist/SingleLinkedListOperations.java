@@ -20,4 +20,5 @@ public interface SingleLinkedListOperations {
 
     SingleLinkedListNode reverseLinkedListRecursively(SingleLinkedListNode head);
 
+    SingleLinkedListNode reverseLinkedListIteratively(SingleLinkedListNode head);
 }

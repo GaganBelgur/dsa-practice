@@ -1,5 +1,7 @@
 package main.java.com.gaganbelgur.dsa.linkedlist.singlelinkedlist;
 
+import java.util.Stack;
+
 public class SingleLinkedListOperationsImpl implements SingleLinkedListOperations {
 
     @Override
@@ -83,6 +85,27 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
     @Override
     public SingleLinkedListNode reverseLinkedListRecursively(SingleLinkedListNode head) {
         return reverseRecursively(null, head);
+    }
+
+    @Override
+    public SingleLinkedListNode reverseLinkedListIteratively(SingleLinkedListNode head) {
+         Stack<Integer> stack = new Stack<>();
+         SingleLinkedListNode temp = head;
+
+         while (temp != null) {
+           stack.push(temp.val);
+           temp = temp.next;
+         }
+
+         SingleLinkedListNode newHead = new SingleLinkedListNode(stack.pop());
+         SingleLinkedListNode current = newHead;
+
+         while (!stack.isEmpty()) {
+           current.next = new SingleLinkedListNode(stack.pop());
+           current = current.next;
+         }
+
+         return newHead;
     }
 
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
