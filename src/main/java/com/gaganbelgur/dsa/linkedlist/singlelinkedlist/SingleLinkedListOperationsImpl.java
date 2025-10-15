@@ -108,6 +108,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
          return newHead;
     }
 
+    @Override
+    public boolean detectLoopInLL(SingleLinkedListNode head) {
+        return false;
+    }
+
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
         if(current == null) return prev;
 
