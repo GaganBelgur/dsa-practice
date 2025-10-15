@@ -110,6 +110,15 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public boolean detectLoopInLL(SingleLinkedListNode head) {
+        SingleLinkedListNode fastPointer = head;
+        SingleLinkedListNode slowPointer = head;
+
+        while(fastPointer != null && fastPointer.next != null) {
+            fastPointer = fastPointer.next.next;
+            slowPointer = slowPointer.next;
+
+            if(fastPointer == slowPointer) return true;
+        }
         return false;
     }
 
