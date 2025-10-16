@@ -124,6 +124,23 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode findStartingPoint(SingleLinkedListNode head) {
+        SingleLinkedListNode fastPointer = head;
+        SingleLinkedListNode slowPointer = head;
+
+        while(fastPointer != null && fastPointer.next != null) {
+            fastPointer = fastPointer.next.next;
+            slowPointer = slowPointer.next;
+
+            if(fastPointer == slowPointer){
+                slowPointer = head;
+
+                while(slowPointer != fastPointer) {
+                    slowPointer = slowPointer.next;
+                    fastPointer = fastPointer.next;
+                }
+                return slowPointer;
+            }
+        }
         return null;
     }
 
