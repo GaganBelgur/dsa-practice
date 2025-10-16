@@ -122,6 +122,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         return false;
     }
 
+    @Override
+    public SingleLinkedListNode findStartingPoint(SingleLinkedListNode head) {
+        return null;
+    }
+
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
         if(current == null) return prev;
 

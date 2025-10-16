@@ -23,4 +23,6 @@ public interface SingleLinkedListOperations {
     SingleLinkedListNode reverseLinkedListIteratively(SingleLinkedListNode head);
 
     boolean detectLoopInLL(SingleLinkedListNode head);
+
+    SingleLinkedListNode findStartingPoint(SingleLinkedListNode head);
 }
