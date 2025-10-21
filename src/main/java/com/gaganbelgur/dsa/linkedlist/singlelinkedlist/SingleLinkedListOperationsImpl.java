@@ -146,7 +146,27 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode removeNthFromEnd(SingleLinkedListNode head, int n) {
-        return null;
+        if(head == null) return head;
+
+        SingleLinkedListNode dummy = new SingleLinkedListNode(0);
+        dummy.next = head;
+
+        SingleLinkedListNode endPointer = dummy;
+        SingleLinkedListNode startPointer = dummy;
+
+        for(int i=0;i<=n;i++) {
+            if(endPointer == null) return head;
+            endPointer = endPointer.next;
+        }
+
+        while(endPointer != null) {
+            startPointer = startPointer.next;
+            endPointer = endPointer.next;
+        }
+
+        startPointer.next = startPointer.next.next;
+
+        return dummy.next;
     }
 
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
