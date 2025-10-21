@@ -25,4 +25,6 @@ public interface SingleLinkedListOperations {
     boolean detectLoopInLL(SingleLinkedListNode head);
 
     SingleLinkedListNode findStartingPoint(SingleLinkedListNode head);
+
+    SingleLinkedListNode removeNthFromEnd(SingleLinkedListNode head, int n);
 }

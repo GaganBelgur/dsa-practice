@@ -144,6 +144,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         return null;
     }
 
+    @Override
+    public SingleLinkedListNode removeNthFromEnd(SingleLinkedListNode head, int n) {
+        return null;
+    }
+
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
         if(current == null) return prev;
 
