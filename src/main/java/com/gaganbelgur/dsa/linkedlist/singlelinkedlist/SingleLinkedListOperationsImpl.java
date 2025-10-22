@@ -171,7 +171,7 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode deleteMiddleNode(SingleLinkedListNode head) {
-        return null;
+        return deleteMiddleNodeBruteForce(head);
     }
 
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
@@ -202,6 +202,24 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         }
 
         slowPointer.next = slowPointer.next.next;
+
+        return head;
+    }
+
+    private SingleLinkedListNode deleteMiddleNodeOptimized(SingleLinkedListNode head) {
+        if(head == null || head.next == null) return null;
+
+        SingleLinkedListNode fastPointer = head;
+        SingleLinkedListNode slowPointer = head;
+        SingleLinkedListNode prev = null;
+
+        while(fastPointer != null && fastPointer.next != null) {
+            fastPointer = fastPointer.next.next;
+            prev = slowPointer;
+            slowPointer = slowPointer.next;
+        }
+
+        prev.next = slowPointer.next;
 
         return head;
     }
