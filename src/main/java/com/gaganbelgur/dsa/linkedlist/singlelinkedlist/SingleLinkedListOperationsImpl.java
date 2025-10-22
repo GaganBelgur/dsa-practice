@@ -169,6 +169,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         return dummy.next;
     }
 
+    @Override
+    public SingleLinkedListNode deleteMiddleNode(SingleLinkedListNode head) {
+        return null;
+    }
+
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
         if(current == null) return prev;
 

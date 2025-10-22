@@ -27,4 +27,6 @@ public interface SingleLinkedListOperations {
     SingleLinkedListNode findStartingPoint(SingleLinkedListNode head);
 
     SingleLinkedListNode removeNthFromEnd(SingleLinkedListNode head, int n);
+
+    SingleLinkedListNode deleteMiddleNode(SingleLinkedListNode head);
 }
