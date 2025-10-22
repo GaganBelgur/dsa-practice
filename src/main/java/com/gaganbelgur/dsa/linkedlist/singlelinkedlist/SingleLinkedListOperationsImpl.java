@@ -185,24 +185,23 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     private SingleLinkedListNode deleteMiddleNodeBruteForce(SingleLinkedListNode head) {
         if(head == null || head.next == null) return null;
-        SingleLinkedListNode fastPointer = head;
-        SingleLinkedListNode slowPointer = head;
 
+        SingleLinkedListNode temp = head;
         int nodeCount=0;
 
-        while(fastPointer != null) {
-            fastPointer = fastPointer.next;
+        while(temp != null) {
+            temp = temp.next;
             nodeCount++;
         }
 
         nodeCount /= 2;
+        temp = head;
 
         for(int i=1;i<nodeCount;i++) {
-            slowPointer = slowPointer.next;
+            temp = temp.next;
         }
 
-        slowPointer.next = slowPointer.next.next;
-
+        temp.next = temp.next.next;
         return head;
     }
 
