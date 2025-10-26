@@ -176,7 +176,23 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode deleteAllOccurrences(SingleLinkedListNode head, int target) {
-        return null;
+        // Step 1: Remove leading target nodes
+        while (head != null && head.val == target) {
+            head = head.next;
+        }
+
+        // Step 2: Remove target nodes from the rest of the list
+        SingleLinkedListNode current = head;
+
+        while (current != null && current.next != null) {
+            if (current.next.val == target) {
+                current.next = current.next.next; // skip the target node
+            } else {
+                current = current.next; // move ahead only if no deletion
+            }
+        }
+
+        return head;
     }
 
     @Override
