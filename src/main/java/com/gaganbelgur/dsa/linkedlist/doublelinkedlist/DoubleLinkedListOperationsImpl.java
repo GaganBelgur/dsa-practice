@@ -5,19 +5,43 @@ public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperation
     @Override
     public DoubleLinkedListNode insertBeforeHead(DoubleLinkedListNode head, int data) {
         DoubleLinkedListNode temp = new DoubleLinkedListNode(data);
-        temp.setNext(head);
-        head.setPrev(temp);
+        temp.next = head;
+        head.prev = temp;
         return temp;
     }
 
     @Override
     public DoubleLinkedListNode deleteHead(DoubleLinkedListNode head) {
-        if(head == null ||head.getNext() == null) return null;
+        if(head == null ||head.next == null) return null;
 
         DoubleLinkedListNode temp = head;
-        head = head.getNext();
-        head.setNext(null);
-        temp.setNext(null);
+        head = head.next;
+        head.next = null;
+        temp.next = null;
+        return head;
+    }
+
+    @Override
+    public DoubleLinkedListNode deleteAllOccurrences(DoubleLinkedListNode head, int target) {
+        if (head == null) return head;
+
+        DoubleLinkedListNode temp = head;
+
+        while (temp != null) {
+            DoubleLinkedListNode nextNode = temp.next;
+
+            if (temp.val == target) {
+                if(temp == head) {
+                    head = nextNode;
+                }
+                DoubleLinkedListNode prev = temp.prev;
+                DoubleLinkedListNode next = temp.next;
+                if (prev != null) prev.next = next;
+                if (next != null) next.prev = prev;
+            }
+            temp = temp.next;
+        }
+
         return head;
     }
 }

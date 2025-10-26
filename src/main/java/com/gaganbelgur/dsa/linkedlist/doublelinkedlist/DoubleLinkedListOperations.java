@@ -6,4 +6,5 @@ public interface DoubleLinkedListOperations {
 
     DoubleLinkedListNode deleteHead(DoubleLinkedListNode head);
 
+    DoubleLinkedListNode deleteAllOccurrences(DoubleLinkedListNode head, int target);
 }
