@@ -14,7 +14,7 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
     @Override
     public SingleLinkedListNode insertAtTail(SingleLinkedListNode head, int data) {
         SingleLinkedListNode newNode = new SingleLinkedListNode(data);
-        if(head == null) {
+        if (head == null) {
             return newNode;
         }
         SingleLinkedListNode temp = head;
@@ -27,14 +27,14 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode deleteHead(SingleLinkedListNode head) {
-        if(head == null) return null;
+        if (head == null) return null;
         return head.next;
     }
 
     @Override
     public boolean searchKey(SingleLinkedListNode head, int key) {
-        while(head != null) {
-            if(head.val == key) {
+        while (head != null) {
+            if (head.val == key) {
                 return true;
             }
             head = head.next;
@@ -62,7 +62,7 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
     public int getLength(SingleLinkedListNode head) {
         int count = 0;
         SingleLinkedListNode temp = head;
-        while(temp != null) {
+        while (temp != null) {
             temp = temp.next;
             count++;
         }
@@ -74,7 +74,7 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         SingleLinkedListNode fastPointer = head;
         SingleLinkedListNode slowPointer = head;
 
-        while(fastPointer != null && fastPointer.next != null) {
+        while (fastPointer != null && fastPointer.next != null) {
             fastPointer = fastPointer.next.next;
             slowPointer = slowPointer.next;
         }
@@ -89,23 +89,23 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode reverseLinkedListIteratively(SingleLinkedListNode head) {
-         Stack<Integer> stack = new Stack<>();
-         SingleLinkedListNode temp = head;
+        Stack<Integer> stack = new Stack<>();
+        SingleLinkedListNode temp = head;
 
-         while (temp != null) {
-           stack.push(temp.val);
-           temp = temp.next;
-         }
+        while (temp != null) {
+            stack.push(temp.val);
+            temp = temp.next;
+        }
 
-         SingleLinkedListNode newHead = new SingleLinkedListNode(stack.pop());
-         SingleLinkedListNode current = newHead;
+        SingleLinkedListNode newHead = new SingleLinkedListNode(stack.pop());
+        SingleLinkedListNode current = newHead;
 
-         while (!stack.isEmpty()) {
-           current.next = new SingleLinkedListNode(stack.pop());
-           current = current.next;
-         }
+        while (!stack.isEmpty()) {
+            current.next = new SingleLinkedListNode(stack.pop());
+            current = current.next;
+        }
 
-         return newHead;
+        return newHead;
     }
 
     @Override
@@ -113,11 +113,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         SingleLinkedListNode fastPointer = head;
         SingleLinkedListNode slowPointer = head;
 
-        while(fastPointer != null && fastPointer.next != null) {
+        while (fastPointer != null && fastPointer.next != null) {
             fastPointer = fastPointer.next.next;
             slowPointer = slowPointer.next;
 
-            if(fastPointer == slowPointer) return true;
+            if (fastPointer == slowPointer) return true;
         }
         return false;
     }
@@ -127,14 +127,14 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         SingleLinkedListNode fastPointer = head;
         SingleLinkedListNode slowPointer = head;
 
-        while(fastPointer != null && fastPointer.next != null) {
+        while (fastPointer != null && fastPointer.next != null) {
             fastPointer = fastPointer.next.next;
             slowPointer = slowPointer.next;
 
-            if(fastPointer == slowPointer){
+            if (fastPointer == slowPointer) {
                 slowPointer = head;
 
-                while(slowPointer != fastPointer) {
+                while (slowPointer != fastPointer) {
                     slowPointer = slowPointer.next;
                     fastPointer = fastPointer.next;
                 }
@@ -146,7 +146,7 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode removeNthFromEnd(SingleLinkedListNode head, int n) {
-        if(head == null) return head;
+        if (head == null) return head;
 
         SingleLinkedListNode dummy = new SingleLinkedListNode(0);
         dummy.next = head;
@@ -154,12 +154,12 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         SingleLinkedListNode endPointer = dummy;
         SingleLinkedListNode startPointer = dummy;
 
-        for(int i=0;i<=n;i++) {
-            if(endPointer == null) return head;
+        for (int i = 0; i <= n; i++) {
+            if (endPointer == null) return head;
             endPointer = endPointer.next;
         }
 
-        while(endPointer != null) {
+        while (endPointer != null) {
             startPointer = startPointer.next;
             endPointer = endPointer.next;
         }
@@ -176,11 +176,33 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode addTwoNumbers(SingleLinkedListNode l1, SingleLinkedListNode l2) {
-        return null;
+        SingleLinkedListNode dummy = new SingleLinkedListNode(0);
+        SingleLinkedListNode current = dummy;
+        int carry = 0;
+
+        while (l1 != null || l2 != null || carry != 0) {
+            int sum = carry;
+
+            if (l1 != null) {
+                sum += l1.val;
+                l1 = l1.next;
+            }
+
+            if (l2 != null) {
+                sum += l2.val;
+                l2 = l2.next;
+            }
+
+            carry = sum / 10;
+            current.next = new SingleLinkedListNode(sum % 10);
+            current = current.next;
+        }
+
+        return dummy.next;
     }
 
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
-        if(current == null) return prev;
+        if (current == null) return prev;
 
         SingleLinkedListNode next = current.next;
         current.next = prev;
@@ -189,12 +211,12 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
     }
 
     private SingleLinkedListNode deleteMiddleNodeBruteForce(SingleLinkedListNode head) {
-        if(head == null || head.next == null) return null;
+        if (head == null || head.next == null) return null;
 
         SingleLinkedListNode temp = head;
-        int nodeCount=0;
+        int nodeCount = 0;
 
-        while(temp != null) {
+        while (temp != null) {
             temp = temp.next;
             nodeCount++;
         }
@@ -202,7 +224,7 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         nodeCount /= 2;
         temp = head;
 
-        for(int i=1;i<nodeCount;i++) {
+        for (int i = 1; i < nodeCount; i++) {
             temp = temp.next;
         }
 
@@ -211,13 +233,13 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
     }
 
     private SingleLinkedListNode deleteMiddleNodeOptimized(SingleLinkedListNode head) {
-        if(head == null || head.next == null) return null;
+        if (head == null || head.next == null) return null;
 
         SingleLinkedListNode fastPointer = head;
         SingleLinkedListNode slowPointer = head;
         SingleLinkedListNode prev = null;
 
-        while(fastPointer != null && fastPointer.next != null) {
+        while (fastPointer != null && fastPointer.next != null) {
             fastPointer = fastPointer.next.next;
             prev = slowPointer;
             slowPointer = slowPointer.next;
