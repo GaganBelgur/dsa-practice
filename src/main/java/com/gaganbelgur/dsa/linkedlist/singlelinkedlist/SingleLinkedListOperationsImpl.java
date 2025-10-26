@@ -174,6 +174,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         return deleteMiddleNodeBruteForce(head);
     }
 
+    @Override
+    public SingleLinkedListNode addTwoNumbers(SingleLinkedListNode l1, SingleLinkedListNode l2) {
+        return null;
+    }
+
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
         if(current == null) return prev;
 

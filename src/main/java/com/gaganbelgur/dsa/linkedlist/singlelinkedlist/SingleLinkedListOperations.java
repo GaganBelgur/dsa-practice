@@ -29,4 +29,6 @@ public interface SingleLinkedListOperations {
     SingleLinkedListNode removeNthFromEnd(SingleLinkedListNode head, int n);
 
     SingleLinkedListNode deleteMiddleNode(SingleLinkedListNode head);
+
+    SingleLinkedListNode addTwoNumbers(SingleLinkedListNode l1, SingleLinkedListNode l2);
 }
