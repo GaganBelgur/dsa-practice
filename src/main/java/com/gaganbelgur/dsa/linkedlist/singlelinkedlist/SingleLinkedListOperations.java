@@ -30,5 +30,7 @@ public interface SingleLinkedListOperations {
 
     SingleLinkedListNode deleteMiddleNode(SingleLinkedListNode head);
 
+    SingleLinkedListNode deleteAllOccurrences(SingleLinkedListNode head, int target);
+
     SingleLinkedListNode addTwoNumbers(SingleLinkedListNode l1, SingleLinkedListNode l2);
 }

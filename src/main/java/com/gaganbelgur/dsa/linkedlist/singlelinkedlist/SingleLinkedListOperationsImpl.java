@@ -175,6 +175,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
     }
 
     @Override
+    public SingleLinkedListNode deleteAllOccurrences(SingleLinkedListNode head, int target) {
+        return null;
+    }
+
+    @Override
     public SingleLinkedListNode addTwoNumbers(SingleLinkedListNode l1, SingleLinkedListNode l2) {
         SingleLinkedListNode dummy = new SingleLinkedListNode(0);
         SingleLinkedListNode current = dummy;
