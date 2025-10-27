@@ -1,5 +1,7 @@
 package main.java.com.gaganbelgur.dsa.linkedlist.doublelinkedlist;
 
+import java.util.List;
+
 public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperations {
 
     @Override
@@ -43,5 +45,10 @@ public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperation
         }
 
         return head;
+    }
+
+    @Override
+    public List<List<Integer>> findPairsWithGivenSum(DoubleLinkedListNode head, int target) {
+        return List.of();
     }
 }
