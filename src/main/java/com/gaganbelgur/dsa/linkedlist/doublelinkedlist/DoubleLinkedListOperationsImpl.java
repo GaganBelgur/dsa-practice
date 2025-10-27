@@ -1,5 +1,7 @@
 package main.java.com.gaganbelgur.dsa.linkedlist.doublelinkedlist;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperations {
@@ -49,6 +51,29 @@ public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperation
 
     @Override
     public List<List<Integer>> findPairsWithGivenSum(DoubleLinkedListNode head, int target) {
-        return List.of();
+        List<List<Integer>> result = new ArrayList<>();
+        if(head == null) return result;
+
+        DoubleLinkedListNode secondPointer = head;
+        DoubleLinkedListNode firstPointer = head;
+
+        while(secondPointer.next != null) {
+            secondPointer = secondPointer.next;
+        }
+
+        while(firstPointer != null && secondPointer != null && firstPointer != secondPointer && secondPointer.next != firstPointer) {
+            int sum = firstPointer.val + secondPointer.val;
+            if(sum == target) {
+                result.add(Arrays.asList(firstPointer.val, secondPointer.val));
+                firstPointer = firstPointer.next;
+                secondPointer = secondPointer.prev;
+            } else if(sum < target) {
+                firstPointer = firstPointer.next;
+            } else {
+                secondPointer = secondPointer.prev;
+            }
+        }
+
+        return result;
     }
 }
