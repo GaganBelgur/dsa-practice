@@ -76,4 +76,9 @@ public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperation
 
         return result;
     }
+
+    @Override
+    public DoubleLinkedListNode removeDuplicates(DoubleLinkedListNode head) {
+        return null;
+    }
 }

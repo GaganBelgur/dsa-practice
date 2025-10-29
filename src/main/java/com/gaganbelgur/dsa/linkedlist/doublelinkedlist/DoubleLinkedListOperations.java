@@ -11,4 +11,6 @@ public interface DoubleLinkedListOperations {
     DoubleLinkedListNode deleteAllOccurrences(DoubleLinkedListNode head, int target);
 
     List<List<Integer>> findPairsWithGivenSum(DoubleLinkedListNode head, int target);
+
+    DoubleLinkedListNode removeDuplicates(DoubleLinkedListNode head);
 }
