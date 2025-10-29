@@ -1,8 +1,6 @@
 package main.java.com.gaganbelgur.dsa.linkedlist.doublelinkedlist;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperations {
 
@@ -79,6 +77,25 @@ public class DoubleLinkedListOperationsImpl implements DoubleLinkedListOperation
 
     @Override
     public DoubleLinkedListNode removeDuplicates(DoubleLinkedListNode head) {
-        return null;
+        if(head == null || head.next == null) return head;
+
+        Map<Integer, Integer> map = new HashMap<>();
+        DoubleLinkedListNode temp = head;
+
+        while (temp != null) {
+            if (map.containsKey(temp.val)) {
+                DoubleLinkedListNode prev = temp.prev;
+                DoubleLinkedListNode next = temp.next;
+
+                if (prev != null) prev.next = next;
+                if (next != null) next.prev = prev;
+            } else {
+                map.put(temp.val, 1);
+            }
+
+            temp = temp.next;
+        }
+
+        return head;
     }
 }
