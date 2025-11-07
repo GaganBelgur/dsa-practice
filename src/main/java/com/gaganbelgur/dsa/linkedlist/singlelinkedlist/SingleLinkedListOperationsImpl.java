@@ -227,20 +227,8 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         SingleLinkedListNode tempOne = headA;
         SingleLinkedListNode tempTwo = headB;
 
-        int count1 = 0;
-        while(tempOne != null) {
-            tempOne = tempOne.next;
-            count1++;
-        }
-
-        int count2 = 0;
-        while(tempTwo != null) {
-            tempTwo = tempTwo.next;
-            count2++;
-        }
-
-        tempOne = headA;
-        tempTwo = headB;
+        int count1 = getLinkedListLength(tempOne);
+        int count2 = getLinkedListLength(tempTwo);
 
         if(count1 > count2) {
             for(int i=0;i<count1-count2;i++) {
@@ -260,6 +248,16 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         }
 
         return null;
+    }
+
+    private int getLinkedListLength(SingleLinkedListNode head) {
+        if (head == null) return 0;
+        int count = 0;
+        while(head != null) {
+            head = head.next;
+            count++;
+        }
+        return count;
     }
 
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
