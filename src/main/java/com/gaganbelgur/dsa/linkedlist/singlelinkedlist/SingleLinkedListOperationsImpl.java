@@ -223,7 +223,42 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
     }
 
     @Override
-    public SingleLinkedListNode getIntersectionNode(SingleLinkedListNode head1, SingleLinkedListNode head2) {
+    public SingleLinkedListNode getIntersectionNode(SingleLinkedListNode headA, SingleLinkedListNode headB) {
+        SingleLinkedListNode tempOne = headA;
+        SingleLinkedListNode tempTwo = headB;
+
+        int count1 = 0;
+        while(tempOne != null) {
+            tempOne = tempOne.next;
+            count1++;
+        }
+
+        int count2 = 0;
+        while(tempTwo != null) {
+            tempTwo = tempTwo.next;
+            count2++;
+        }
+
+        tempOne = headA;
+        tempTwo = headB;
+
+        if(count1 > count2) {
+            for(int i=0;i<count1-count2;i++) {
+                tempOne = tempOne.next;
+            }
+        } else {
+            for(int i=0;i<count2-count1;i++) {
+                tempTwo = tempTwo.next;
+            }
+        }
+
+        while(tempOne != null && tempTwo != null) {
+            if(tempOne == tempTwo) return tempOne;
+
+            tempOne = tempOne.next;
+            tempTwo = tempTwo.next;
+        }
+
         return null;
     }
 
