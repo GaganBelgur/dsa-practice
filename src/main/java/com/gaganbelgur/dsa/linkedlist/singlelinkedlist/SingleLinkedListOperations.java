@@ -33,4 +33,6 @@ public interface SingleLinkedListOperations {
     SingleLinkedListNode deleteAllOccurrences(SingleLinkedListNode head, int target);
 
     SingleLinkedListNode addTwoNumbers(SingleLinkedListNode l1, SingleLinkedListNode l2);
+
+    SingleLinkedListNode getIntersectionNode(SingleLinkedListNode head1, SingleLinkedListNode head2);
 }

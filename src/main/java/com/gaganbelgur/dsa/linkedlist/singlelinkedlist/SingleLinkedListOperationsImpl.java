@@ -222,6 +222,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         return dummy.next;
     }
 
+    @Override
+    public SingleLinkedListNode getIntersectionNode(SingleLinkedListNode head1, SingleLinkedListNode head2) {
+        return null;
+    }
+
     private SingleLinkedListNode reverseRecursively(SingleLinkedListNode prev, SingleLinkedListNode current) {
         if (current == null) return prev;
 
