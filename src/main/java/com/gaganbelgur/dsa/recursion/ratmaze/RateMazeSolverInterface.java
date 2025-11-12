@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.recursion;
+package main.java.com.gaganbelgur.dsa.recursion.ratmaze;
 
 import java.util.List;
 
