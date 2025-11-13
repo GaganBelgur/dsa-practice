@@ -252,7 +252,34 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
 
     @Override
     public SingleLinkedListNode rotateRight(SingleLinkedListNode head, int k) {
-        return null;
+        if (head == null || head.next == null || k == 0) return head;
+
+        // Step 1: Find length and tail
+        SingleLinkedListNode tail = head;
+        int length = 1;
+        while (tail.next != null) {
+            tail = tail.next;
+            length++;
+        }
+
+        // Step 2: Normalize k
+        k = k % length;
+        if (k == 0) return head;
+
+        // Step 3: Find new tail (at position length - k - 1)
+        SingleLinkedListNode newTail = head;
+        for (int i = 0; i < length - k - 1; i++) {
+            newTail = newTail.next;
+        }
+
+        // Step 4: New head is next of new tail
+        SingleLinkedListNode newHead = newTail.next;
+
+        // Step 5: Break connection and re-link
+        newTail.next = null;
+        tail.next = head;
+
+        return newHead;
     }
 
     private int getLinkedListLength(SingleLinkedListNode head) {
