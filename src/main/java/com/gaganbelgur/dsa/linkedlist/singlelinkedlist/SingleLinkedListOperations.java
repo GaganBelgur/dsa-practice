@@ -35,4 +35,6 @@ public interface SingleLinkedListOperations {
     SingleLinkedListNode addTwoNumbers(SingleLinkedListNode l1, SingleLinkedListNode l2);
 
     SingleLinkedListNode getIntersectionNode(SingleLinkedListNode head1, SingleLinkedListNode head2);
+
+    SingleLinkedListNode rotateRight(SingleLinkedListNode head, int k);
 }

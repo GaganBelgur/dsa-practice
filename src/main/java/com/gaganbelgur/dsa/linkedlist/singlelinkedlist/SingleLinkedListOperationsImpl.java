@@ -250,6 +250,11 @@ public class SingleLinkedListOperationsImpl implements SingleLinkedListOperation
         return null;
     }
 
+    @Override
+    public SingleLinkedListNode rotateRight(SingleLinkedListNode head, int k) {
+        return null;
+    }
+
     private int getLinkedListLength(SingleLinkedListNode head) {
         if (head == null) return 0;
         int count = 0;
