@@ -14,10 +14,7 @@ public class LongestCommonSubsequenceSolverRecursion implements LongestCommonSub
         if (str1.charAt(index1) == str2.charAt(index2)) {
             ans = 1 + findLCS(str1, str2, index1 - 1, index2 - 1);
         } else {
-            ans =
-                    Math.max(
-                            findLCS(str1, str2, index1 - 1, index2),
-                            findLCS(str1, str2, index1, index2 - 1));
+            ans = Math.max(findLCS(str1, str2, index1 - 1, index2), findLCS(str1, str2, index1, index2 - 1));
         }
         return ans;
     }

@@ -15,7 +15,7 @@ public class PalindromePartitionSolverImpl implements PalindromePartitionSolverI
 
     private void findPalindromeSubstrings(int index, String s, List<String> path, List<List<String>> result) {
         if (index == s.length()) {
-            result.add(new ArrayList<String>(path));
+            result.add(new ArrayList<>(path));
             return;
         }
 
