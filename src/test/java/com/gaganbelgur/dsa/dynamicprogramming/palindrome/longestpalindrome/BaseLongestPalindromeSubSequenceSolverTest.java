@@ -9,7 +9,7 @@ public abstract class BaseLongestPalindromeSubSequenceSolverTest {
     protected abstract LongestPalindromeSubSequenceSolver getSolver();
 
     @Test
-    public void GivenTwoStringsWhenPalindromeIsInvokedThenLongestPalindromeLengthIsReturned() {
+    public void GivenValidStringWhenPalindromeIsInvokedThenLongestPalindromeLengthIsReturned() {
         String str = "EEEME";
 
         int expected = 4;
