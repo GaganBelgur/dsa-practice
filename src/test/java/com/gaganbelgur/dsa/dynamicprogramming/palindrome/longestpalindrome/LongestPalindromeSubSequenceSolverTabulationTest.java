@@ -1,4 +1,4 @@
-package test.java.com.gaganbelgur.dsa.dynamicprogramming.palindrome;
+package test.java.com.gaganbelgur.dsa.dynamicprogramming.palindrome.longestpalindrome;
 
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.palindrome.longestpalindrome.LongestPalindromeSubSequenceSolver;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.palindrome.longestpalindrome.LongestPalindromeSubSequenceSolverTabulation;
