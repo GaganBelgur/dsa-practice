@@ -17,6 +17,7 @@ public abstract class BaseLongestCommonSubsequenceSolverTest {
 
         Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void GivenTwoNonCommonStringsWhenLCSIsInvokedThenCorrectLengthIsReturned() {
         String str1 = "AGGTAB";
