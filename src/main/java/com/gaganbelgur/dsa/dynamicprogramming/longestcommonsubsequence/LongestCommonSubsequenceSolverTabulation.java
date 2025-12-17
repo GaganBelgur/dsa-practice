@@ -1,7 +1,5 @@
 package main.java.com.gaganbelgur.dsa.dynamicprogramming.longestcommonsubsequence;
 
-import java.util.Arrays;
-
 public class LongestCommonSubsequenceSolverTabulation implements LongestCommonSubsequenceSolver {
 
     @Override

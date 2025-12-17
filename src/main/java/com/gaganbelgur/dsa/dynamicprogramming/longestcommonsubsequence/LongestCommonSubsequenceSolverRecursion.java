@@ -4,7 +4,7 @@ public class LongestCommonSubsequenceSolverRecursion implements LongestCommonSub
 
     @Override
     public int lcs(String str1, String str2) {
-        return findLCS(str1, str2, str1.length(), str2.length());
+        return findLCS(str1, str2, str1.length() - 1, str2.length() - 1);
     }
 
     private int findLCS(String str1, String str2, int index1, int index2) {
