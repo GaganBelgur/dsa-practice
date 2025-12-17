@@ -1,7 +1,6 @@
 package test.java.com.gaganbelgur.dsa.dynamicprogramming.subsetsum;
 
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.subsequence.SubsetSumSolverInterface;
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.threedimension.AliceBobChocolatesSolver;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.subset.SubsetSumSolverInterface;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

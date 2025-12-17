@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.dynamicprogramming.subsequence;
+package main.java.com.gaganbelgur.dsa.dynamicprogramming.subset;
 
 public interface SubsetSumSolverInterface {
 
