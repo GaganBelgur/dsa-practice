@@ -12,8 +12,8 @@ public class SubsetSumSolverRecursion implements SubsetSumSolverInterface {
         if (index == 0) return arr[index] == target;
 
         boolean notTake = isSubsetPresent(arr, index - 1, target);
-        boolean take = false;
 
+        boolean take = false;
         if (target >= arr[index]) {
             take = isSubsetPresent(arr, index - 1, target - arr[index]);
         }
