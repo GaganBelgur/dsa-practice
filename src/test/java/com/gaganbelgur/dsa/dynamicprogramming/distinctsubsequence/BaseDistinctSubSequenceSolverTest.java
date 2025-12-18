@@ -1,6 +1,7 @@
 package test.java.com.gaganbelgur.dsa.dynamicprogramming.distinctsubsequence;
 
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.distinctsubsequences.DistinctSubSequenceSolverInterface;
+import org.junit.Assert;
 import org.junit.Test;
 
 public abstract class BaseDistinctSubSequenceSolverTest {
@@ -14,6 +15,16 @@ public abstract class BaseDistinctSubSequenceSolverTest {
         int actual = getSolver().distinctSubsequences(s1, s2);
         int expected = 5;
 
-        assert expected == actual;
+        Assert.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDistinctSubsequence2() {
+        String s1 = "abbc";
+        String s2 = "ac";
+        int actual = getSolver().distinctSubsequences(s1, s2);
+        int expected = 1;
+
+        Assert.assertEquals(expected, actual);
     }
 }
