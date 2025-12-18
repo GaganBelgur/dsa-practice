@@ -7,7 +7,6 @@ public class ShortestCommonSuperSequenceSolverTabulationTest extends BaseShortes
 
     private final ShortestCommonSuperSequenceSolverTabulation solver = new ShortestCommonSuperSequenceSolverTabulation();
 
-
     @Override
     protected ShortestCommonSuperSequenceSolverInterface getSolver() {
         return solver;
