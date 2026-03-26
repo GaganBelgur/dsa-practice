@@ -12,14 +12,13 @@ public class LongestSubstringWithoutRepeatingCharactersOptimalApproach implement
 
         for (int right = 0; right < s.length(); right++) {
             char c = s.charAt(right);
-            int ascii = (int) c;
 
             // if character seen in current window
-            if (lastSeen[ascii] >= left) {
-                left = lastSeen[ascii] + 1;
+            if (lastSeen[c] >= left) {
+                left = lastSeen[c] + 1;
             }
 
-            lastSeen[ascii] = right;
+            lastSeen[c] = right;
             max = Math.max(max, right - left + 1);
         }
 
