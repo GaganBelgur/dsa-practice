@@ -5,12 +5,12 @@ import java.util.Map;
 
 public class LRUCache implements LRUCacheSolverInterface {
 
-    private Map<Integer, Node> cacheMap;
-    private int capacity;
+    private final Map<Integer, Node> cacheMap;
+    private final int capacity;
 
-    private Node head;
+    private final Node head;
 
-    private Node tail;
+    private final Node tail;
 
     public LRUCache(int capacity) {
         this.capacity = capacity;
@@ -47,7 +47,7 @@ public class LRUCache implements LRUCacheSolverInterface {
 
         if(cacheMap.size() == capacity) {
             Node node = tail.prev;
-            cacheMap.remove(node);
+            cacheMap.remove(key);
             deleteNode(node);
         }
     }
