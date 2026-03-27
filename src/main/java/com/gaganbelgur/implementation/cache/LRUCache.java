@@ -47,7 +47,7 @@ public class LRUCache implements LRUCacheSolverInterface {
 
         if(cacheMap.size() == capacity) {
             Node node = tail.prev;
-            cacheMap.remove(key);
+            cacheMap.remove(node.key);
             deleteNode(node);
         }
     }
