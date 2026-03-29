@@ -24,7 +24,7 @@ public class MColouringSolverImpl implements MColoringProblemSolverInterface {
     private boolean graphColor(int node, int m, int n, int[] colors, List<List<Integer>> adjacencyList) {
         if(node == n) return true;
 
-        for(int i = 1; i <= m; i++) {  // ✅ FIXED
+        for(int i = 1; i <= m; i++) {
             if(canNodeBeColored(i, node, colors, adjacencyList)) {
                 colors[node] = i;
 
@@ -42,5 +42,21 @@ public class MColouringSolverImpl implements MColoringProblemSolverInterface {
             if(colors[neighbor] == color) return false;
         }
         return true;
+    }
+
+    public static void main(String[] args) {
+        MColouringSolverImpl sol = new MColouringSolverImpl();
+        int[][] edges = {
+                {0, 1}, {0, 2}, {1, 2}, {1, 3}
+        };
+        int m = 3; // Number of colors
+        int n = 4; // Number of nodes
+
+        // Check if the graph can be colored with m colors
+        if (sol.graphColoring(edges, m, n)) {
+            System.out.println("The graph can be colored with " + m + " colors.");
+        } else {
+            System.out.println("The graph cannot be colored with " + m + " colors.");
+        }
     }
 }
