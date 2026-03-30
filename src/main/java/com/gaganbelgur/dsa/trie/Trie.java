@@ -54,10 +54,13 @@ public class Trie implements TrieOperationsSolverInterface {
 
     public static void main(String[] args) {
         TrieOperationsSolverInterface trie = new Trie();
-        trie.insert("ga");
-        boolean searchResult = trie.startsWith("app");
+        trie.insert("apple");
+        trie.insert("app");
 
-        System.out.println(searchResult + "");
+        System.out.println(trie.search("apple"));   // true
+        System.out.println(trie.search("app"));     // true
+        System.out.println(trie.search("appl"));    // false
+        System.out.println(trie.startsWith("ap"));  // true
 
     }
 }
