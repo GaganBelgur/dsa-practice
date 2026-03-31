@@ -1,6 +1,6 @@
 package main.java.com.gaganbelgur.dsa.trie;
 
-public interface TrieOperationsSolverInterface {
+public interface TrieBasicOperationsSolverInterface {
     void insert(String word);
 
     boolean search(String word);

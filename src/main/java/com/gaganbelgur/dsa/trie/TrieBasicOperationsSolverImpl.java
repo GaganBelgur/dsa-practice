@@ -1,10 +1,10 @@
 package main.java.com.gaganbelgur.dsa.trie;
 
-public class Trie implements TrieOperationsSolverInterface {
+public class TrieBasicOperationsSolverImpl implements TrieBasicOperationsSolverInterface {
 
     TrieNode rootNode;
 
-    public Trie() {
+    public TrieBasicOperationsSolverImpl() {
         rootNode = new TrieNode();
     }
 
@@ -53,7 +53,7 @@ public class Trie implements TrieOperationsSolverInterface {
     }
 
     public static void main(String[] args) {
-        TrieOperationsSolverInterface trie = new Trie();
+        TrieBasicOperationsSolverInterface trie = new TrieBasicOperationsSolverImpl();
         trie.insert("apple");
         trie.insert("app");
 
