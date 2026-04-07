@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.trees.traversal;
+package main.java.com.gaganbelgur.dsa.trees.traversal.preorder;
 
 import main.java.com.gaganbelgur.dsa.trees.TreeNode;
 
@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class IterativePreOrderTraversal {
+public class PreOrderIterativeTraversalSolverImpl implements PreOrderTraversalSolverInterface {
 
-    public List<Integer> preorder(TreeNode root) {
+    @Override
+    public List<Integer> preorderTraversal(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();
         List<Integer> result = new ArrayList<>();
         stack.push(root);
