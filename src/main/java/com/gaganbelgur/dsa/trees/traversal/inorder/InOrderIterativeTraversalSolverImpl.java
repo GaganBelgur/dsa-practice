@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.trees.traversal;
+package main.java.com.gaganbelgur.dsa.trees.traversal.inorder;
 
 import main.java.com.gaganbelgur.dsa.trees.TreeNode;
 
@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
-public class IterativeInOrderTraversal {
+public class InOrderIterativeTraversalSolverImpl implements InOrderTraversalSolverInterface {
 
     public List<Integer> inorder(TreeNode root) {
         Stack<TreeNode> stack = new Stack<>();

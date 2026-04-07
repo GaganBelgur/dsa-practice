@@ -5,7 +5,7 @@ import main.java.com.gaganbelgur.dsa.trees.TreeNode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PreorderRecursiveTraversalSolverImpl implements PreOrderTraversalSolverInterface {
+public class PreOrderRecursiveTraversalSolverImpl implements PreOrderTraversalSolverInterface {
 
     public List<Integer> preorderTraversal(TreeNode node) {
         List<Integer> result = new ArrayList<>();
