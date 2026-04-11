@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface LevelOrderTraversalSolverInterface {
 
-    List<Integer> levelOrder(TreeNode root);
+    List<List<Integer>> levelOrder(TreeNode root);
 }
