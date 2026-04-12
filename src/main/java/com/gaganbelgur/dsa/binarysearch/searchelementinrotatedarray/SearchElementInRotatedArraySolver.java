@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.binarysearch.searchelementonedimension;
+package main.java.com.gaganbelgur.dsa.binarysearch.searchelementinrotatedarray;
 
 public class SearchElementInRotatedArraySolver implements SearchElementInRotatedArraySolverInterface {
 
