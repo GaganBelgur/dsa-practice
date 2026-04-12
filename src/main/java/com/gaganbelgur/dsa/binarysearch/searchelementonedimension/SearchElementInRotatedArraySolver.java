@@ -1,6 +1,6 @@
 package main.java.com.gaganbelgur.dsa.binarysearch.searchelementonedimension;
 
-public class SearchElementInOneDimensionArraySolver implements SearchElementInOneDimensionArraySolverInterface {
+public class SearchElementInRotatedArraySolver implements SearchElementInRotatedArraySolverInterface {
 
     @Override
     public int search(int[] nums, int target) {
