@@ -4,7 +4,7 @@ import main.java.com.gaganbelgur.dsa.trees.TreeNode;
 
 import java.util.List;
 
-public interface BinaryTreesTopViewSolverInterface {
+public interface BinaryTreesViewSolverInterface {
 
-    List<Integer> topView(TreeNode root);
+    List<Integer> view(TreeNode root);
 }

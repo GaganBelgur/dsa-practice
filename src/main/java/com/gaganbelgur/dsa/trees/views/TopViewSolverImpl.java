@@ -5,9 +5,9 @@ import main.java.com.gaganbelgur.dsa.trees.TreeNode;
 
 import java.util.*;
 
-public class BinaryTreesTopViewSolverImpl implements BinaryTreesTopViewSolverInterface {
+public class TopViewSolverImpl implements BinaryTreesViewSolverInterface {
     @Override
-    public List<Integer> topView(TreeNode root) {
+    public List<Integer> view(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if(root == null) return result;
 
