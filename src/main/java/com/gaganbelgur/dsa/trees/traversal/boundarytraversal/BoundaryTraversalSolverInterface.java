@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.trees.boundarytraversal;
+package main.java.com.gaganbelgur.dsa.trees.traversal.boundarytraversal;
 
 import main.java.com.gaganbelgur.dsa.trees.TreeNode;
 
