@@ -3,7 +3,7 @@ package main.java.com.gaganbelgur.dsa.arrays.smallestcommonelement;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SmallestCommonElementSolverImpl implements SmallestCommonElementSolverInterface {
+public class SmallestCommonElementBetterApproachSolverImpl implements SmallestCommonElementSolverInterface {
 
     @Override
     public int smallestCommonElement(int[][] mat) {
