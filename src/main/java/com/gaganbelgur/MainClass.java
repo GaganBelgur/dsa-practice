@@ -4,9 +4,7 @@ import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLonge
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBetterImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBruteForceImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceOptimalApproachImpl;
-import main.java.com.gaganbelgur.dsa.sorting.MergeSort;
-import main.java.com.gaganbelgur.dsa.sorting.QuickSort;
-import main.java.com.gaganbelgur.dsa.sorting.SortInterface;
+import main.java.com.gaganbelgur.dsa.sorting.*;
 
 import java.util.Arrays;
 
@@ -22,6 +20,11 @@ public class MainClass {
         int[] quickSortInputArray = {4, 3, 9, 1};
         quickSort.sort(quickSortInputArray);
         System.out.println(Arrays.toString(quickSortInputArray));
+
+        SortInterface bubbleSort = new BubbleSort();
+        int[] bubbleSortInputArray = {4, 3, 9, 1};
+        bubbleSort.sort(bubbleSortInputArray);
+        System.out.println(Arrays.toString(bubbleSortInputArray));
 
         findLongestConsecutiveSequence(new FindLongestConsecutiveSequenceInterfaceBruteForceImpl());
         findLongestConsecutiveSequence(new FindLongestConsecutiveSequenceInterfaceBetterImpl());
