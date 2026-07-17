@@ -26,6 +26,11 @@ public class MainClass {
         bubbleSort.sort(bubbleSortInputArray);
         System.out.println(Arrays.toString(bubbleSortInputArray));
 
+        SortInterface insertionSort = new InsertionSort();
+        int[] insertionSortInputArray = {6,5,4,3,2,1};
+        insertionSort.sort(insertionSortInputArray);
+        System.out.println(Arrays.toString(insertionSortInputArray));
+
         findLongestConsecutiveSequence(new FindLongestConsecutiveSequenceInterfaceBruteForceImpl());
         findLongestConsecutiveSequence(new FindLongestConsecutiveSequenceInterfaceBetterImpl());
         findLongestConsecutiveSequence(new FindLongestConsecutiveSequenceOptimalApproachImpl());
