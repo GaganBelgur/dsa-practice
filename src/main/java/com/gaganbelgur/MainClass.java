@@ -4,6 +4,8 @@ import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLonge
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBetterImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBruteForceImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceOptimalApproachImpl;
+import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersSolverImpl;
 import main.java.com.gaganbelgur.dsa.sorting.*;
 
 import java.util.Arrays;
@@ -34,6 +36,10 @@ public class MainClass {
         findLongestConsecutiveSequence(new FindLongestConsecutiveSequenceInterfaceBruteForceImpl());
         findLongestConsecutiveSequence(new FindLongestConsecutiveSequenceInterfaceBetterImpl());
         findLongestConsecutiveSequence(new FindLongestConsecutiveSequenceOptimalApproachImpl());
+
+        CountGoodNumbersProblemSolverInterface goodNumbersProblemSolverInterface = new CountGoodNumbersSolverImpl();
+        int result = goodNumbersProblemSolverInterface.countGoodNumbers(22);
+        System.out.println("Count Good Number = " + result);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
