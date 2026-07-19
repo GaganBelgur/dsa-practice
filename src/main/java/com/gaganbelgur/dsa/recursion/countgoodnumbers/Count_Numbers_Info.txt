@@ -15,3 +15,80 @@ Output: 5
 Explanation:
 Only one index (0) → must be even.
 Valid strings: "0", "2", "4", "6", "8"
+
+Code Explanation:
+To solve the problem of counting good digit strings of length n, we can break down the requirements
+for the digits at even and odd indices.
+
+1. **Even Indices (0-based)**: The digits at even indices must be even digits. The valid even digits are {0, 2, 4, 6, 8},
+   which gives us 5 choices for each even index.
+2. **Odd Indices (0-based)**: The digits at odd indices must be prime digits. The valid prime digits are {2, 3, 5, 7},
+   which gives us 4 choices for each odd index.
+
+Example: 5^13
+Normal Multiplication: 5^13 = 5*5*5*5*5*5*5*5*5*5*5*5*5*5*5
+Its 13 multiplications, which is a lot.
+
+So we can use Binary Exponentiation to reduce the number of multiplications.
+Exponential value is represented in binary Therefore 13 is (1101) in binary.
+So we can represent 5^13 as:
+5^13 = 5^(1*2^0) * 5^(0*2^1) * 5^(1*2^2) * 5^(1*2^3) = 5^1 * 5^0 * 5^4 * 5^8
+This reduces the number of multiplications to 4 instead of 13.
+
+its 4 squares and 3 multiplications. So we can use Binary Exponentiation to reduce the number of multiplications. This is
+a Fast Modular Exponentiation technique that allows us to compute large powers modulo a number efficiently.
+
+13 = (1101) in binary
+13 = 8 + 4 + 0 + 1
+Therefore we need only 3^1, 3^2, 3^4, 3^8 to compute 3^13.
+
+1. Why Square every iteration?
+In binary exponentiation, we square the base at each iteration to efficiently compute powers. This is because each
+bit in the binary representation of the exponent corresponds to a power of 2. By squaring the base,
+we can quickly compute higher powers without having to multiply the base repeatedly.
+
+base = 5
+After one Squaring: 5^2 = 25
+After two Squaring: 5^4 = 625
+After three Squaring: 5^8 = 390625
+
+Each squaring operation effectively doubles the exponent, allowing us to reach the desired power more quickly.
+
+2. Why divide the exponent by 2?
+In binary exponentiation, we divide the exponent by 2 at each iteration to process the bits of the exponent from
+least significant to most significant. This allows us to determine whether to include the current power of the base
+in the final result based on whether the current bit is 1 or 0. By halving the exponent, we can efficiently traverse
+through its binary representation and build the result step by step.
+
+Example: 13 = (1101) in binary
+- Start with exponent = 13 (binary 1101)
+
+- Current bit (LSB) is 1 → include 5^1 in the result
+- Divide exponent by 2 → exponent = 6 (binary 110)
+
+- Current bit is 0 → do not include 5^2 in the result
+- Divide exponent by 2 → exponent = 3 (binary 11)
+
+- Current bit is 1 → include 5^4 in the result
+- Divide exponent by 2 → exponent = 1 (binary 1)
+
+- Current bit is 1 → include 5^8 in the result
+- Divide exponent by 2 → exponent = 0 (binary 0)
+
+This process continues until the exponent reaches 0, at which point we have included all necessary powers
+of the base in the final result.
+
+3. Why take modulo 10^9 + 7?
+Taking modulo 10^9 + 7 is a common practice in competitive programming and algorithm design
+to prevent integer overflow and to keep numbers manageable. By taking results modulo 10^9 + 7, we ensure that our calculations
+remain within the bounds of standard integer types.
+
+4. The Golden Rule
+
+Whenever you see
+base^exponent
+
+ask yourself one question:
+"Can the exponent be very large?"
+
+If the answer is Yes, think Binary Exponentiation.
