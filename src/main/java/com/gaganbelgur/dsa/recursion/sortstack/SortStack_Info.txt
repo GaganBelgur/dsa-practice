@@ -1,0 +1,25 @@
+You are given a stack of integers. Your task is to sort the stack in descending order using recursion,
+such that the top of the stack contains the greatest element.
+
+You are not allowed to use any loop-based sorting methods (e.g., quicksort, mergesort).
+You may only use recursive operations and the standard stack operations (push, pop, peek/top, and isEmpty).
+
+Example 1
+Input: stack = [4, 1, 3, 2]
+Output: [4, 3, 2, 1]
+Explanation:
+After sorting, the largest element (4) is at the top, and the smallest (1) is at the bottom.
+
+Approach:
+1. Recursive Sorting: We will create a recursive function that sorts the stack.
+   The function will pop the top element, recursively sort the remaining stack,
+   and then insert the popped element back into the sorted stack in the correct position.
+
+2. Insert in Sorted Order: We will create a helper function that takes an element and
+   inserts it into the correct position in a sorted stack. This function will also be recursive,
+   popping elements until it finds the right position for the new element,
+   and then pushing the popped elements back onto the stack.
+
+
+
+
