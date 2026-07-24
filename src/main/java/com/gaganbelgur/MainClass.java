@@ -6,6 +6,8 @@ import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLonge
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceOptimalApproachImpl;
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersSolverImpl;
+import main.java.com.gaganbelgur.dsa.recursion.reversestack.ReverseStackProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.recursion.reversestack.ReverseStackSolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.sortstack.SortStackProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.sortstack.SortStackSolverImpl;
 import main.java.com.gaganbelgur.dsa.sorting.*;
@@ -55,6 +57,11 @@ public class MainClass {
         System.out.println("Before Sorting: "  + stack);
         sortStack.sort(stack);
         System.out.println("After Sorting: "  + stack);
+
+        ReverseStackProblemSolverInterface reverseStackProblemSolver =  new ReverseStackSolverImpl();
+        System.out.println("Before Reversing: " + stack);
+        reverseStackProblemSolver.reverse(stack);
+        System.out.println("After Reversing: " + stack);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
