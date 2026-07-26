@@ -4,6 +4,8 @@ import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLonge
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBetterImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBruteForceImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceOptimalApproachImpl;
+import main.java.com.gaganbelgur.dsa.recursion.atoi.ATOIProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.recursion.atoi.ATOISolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersSolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.reversestack.ReverseStackProblemSolverInterface;
@@ -34,7 +36,7 @@ public class MainClass {
         System.out.println(Arrays.toString(bubbleSortInputArray));
 
         SortInterface insertionSort = new InsertionSort();
-        int[] insertionSortInputArray = {6,5,4,3,2,1};
+        int[] insertionSortInputArray = {6, 5, 4, 3, 2, 1};
         insertionSort.sort(insertionSortInputArray);
         System.out.println(Arrays.toString(insertionSortInputArray));
 
@@ -54,14 +56,19 @@ public class MainClass {
         stack.push(1);
         stack.push(3);
 
-        System.out.println("Before Sorting: "  + stack);
+        System.out.println("Before Sorting: " + stack);
         sortStack.sort(stack);
-        System.out.println("After Sorting: "  + stack);
+        System.out.println("After Sorting: " + stack);
 
-        ReverseStackProblemSolverInterface reverseStackProblemSolver =  new ReverseStackSolverImpl();
+        ReverseStackProblemSolverInterface reverseStackProblemSolver = new ReverseStackSolverImpl();
         System.out.println("Before Reversing: " + stack);
         reverseStackProblemSolver.reverse(stack);
         System.out.println("After Reversing: " + stack);
+
+        ATOIProblemSolverInterface atoiProblemSolverInterface = new ATOISolverImpl();
+        String inputString = "   -42";
+        int resultFromAtoi = atoiProblemSolverInterface.myATOI(inputString);
+        System.out.println("Result from ATOI: " + resultFromAtoi);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
