@@ -8,6 +8,8 @@ import main.java.com.gaganbelgur.dsa.recursion.atoi.ATOIProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.atoi.ATOISolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersSolverImpl;
+import main.java.com.gaganbelgur.dsa.recursion.generatebinarystrings.BinaryStringsGeneratorProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.recursion.generatebinarystrings.BinaryStringsSolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.reversestack.ReverseStackProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.reversestack.ReverseStackSolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.sortstack.SortStackProblemSolverInterface;
@@ -15,6 +17,7 @@ import main.java.com.gaganbelgur.dsa.recursion.sortstack.SortStackSolverImpl;
 import main.java.com.gaganbelgur.dsa.sorting.*;
 
 import java.util.Arrays;
+import java.util.List;
 import java.util.Stack;
 
 public class MainClass {
@@ -69,6 +72,14 @@ public class MainClass {
         String inputString = "   -42";
         int resultFromAtoi = atoiProblemSolverInterface.myATOI(inputString);
         System.out.println("Result from ATOI: " + resultFromAtoi);
+
+        BinaryStringsGeneratorProblemSolverInterface binaryStringGenerator = new BinaryStringsSolverImpl();
+        int n = 3;
+        System.out.println("Binary Strings of length " + n + ":");
+        List<String> binaryStrings = binaryStringGenerator.generateBinaryStrings(n);
+        for (String s : binaryStrings) {
+            System.out.println(s);
+        }
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
