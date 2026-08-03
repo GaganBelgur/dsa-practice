@@ -10,6 +10,8 @@ import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbers
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersSolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.generatebinarystrings.BinaryStringsGeneratorProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.generatebinarystrings.BinaryStringsSolverImpl;
+import main.java.com.gaganbelgur.dsa.recursion.generateparanthesis.GenerateParenthesisProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.recursion.generateparanthesis.GenerateParenthesisSolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.permutation.PermutationProblemSolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.permutation.PermutationProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.reversestack.ReverseStackProblemSolverInterface;
@@ -87,6 +89,10 @@ public class MainClass {
         int[] input = {2,4,6};
         List<List<Integer>> permutationResult = permutation.permute(input);
         System.out.println(permutationResult);
+
+        GenerateParenthesisProblemSolverInterface generateParenthesis = new GenerateParenthesisSolverImpl();
+        List<String> parenthesisResult = generateParenthesis.generateParenthesis(2);
+        System.out.println(parenthesisResult);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
