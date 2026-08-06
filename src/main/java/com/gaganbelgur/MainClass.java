@@ -19,6 +19,8 @@ import main.java.com.gaganbelgur.dsa.recursion.reversestack.ReverseStackSolverIm
 import main.java.com.gaganbelgur.dsa.recursion.sortstack.SortStackProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.sortstack.SortStackSolverImpl;
 import main.java.com.gaganbelgur.dsa.sorting.*;
+import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueImpl;
+import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueInterface;
 
 import java.util.Arrays;
 import java.util.List;
@@ -93,6 +95,15 @@ public class MainClass {
         GenerateParenthesisProblemSolverInterface generateParenthesis = new GenerateParenthesisSolverImpl();
         List<String> parenthesisResult = generateParenthesis.generateParenthesis(2);
         System.out.println(parenthesisResult);
+
+        ImplementStackUsingQueueInterface stackQueue = new ImplementStackUsingQueueImpl();
+        stackQueue.push(2);
+        stackQueue.push(4);
+        stackQueue.push(1);
+        stackQueue.push(3);
+        stackQueue.push(6);
+
+        System.out.println("Stack Queue: " + stackQueue.top());
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
