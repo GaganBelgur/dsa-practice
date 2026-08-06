@@ -9,7 +9,7 @@ class ImplementStackUsingQueueTest {
     private val implementStackUsingQueueImpl = ImplementStackUsingQueueImpl()
 
     @Test
-    fun test() {
+    fun `Given 1,2,3 number, When top is invoked, Then the top is returned`() {
         implementStackUsingQueueImpl.push(1)
         implementStackUsingQueueImpl.push(2)
         implementStackUsingQueueImpl.push(3)
