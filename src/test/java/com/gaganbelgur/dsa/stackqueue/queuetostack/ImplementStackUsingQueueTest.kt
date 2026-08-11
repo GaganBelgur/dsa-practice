@@ -4,6 +4,7 @@ import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUs
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
+@Suppress("FunctionName")
 class ImplementStackUsingQueueTest {
 
     private val implementStackUsingQueueImpl = ImplementStackUsingQueueImpl()
