@@ -19,6 +19,9 @@ import main.java.com.gaganbelgur.dsa.recursion.reversestack.ReverseStackSolverIm
 import main.java.com.gaganbelgur.dsa.recursion.sortstack.SortStackProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.sortstack.SortStackSolverImpl;
 import main.java.com.gaganbelgur.dsa.sorting.*;
+import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisDepthBruteForceSolverImpl;
+import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisDepthOptimalSolverImpl;
+import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisDepthProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueImpl;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueInterface;
 
@@ -104,6 +107,15 @@ public class MainClass {
         stackQueue.push(6);
 
         System.out.println("Stack Queue: " + stackQueue.top());
+
+        ParenthesisDepthProblemSolverInterface parenthesisDepthProblemSolver = new ParenthesisDepthBruteForceSolverImpl();
+        String parenthesisInput = "((()))";
+        int depth = parenthesisDepthProblemSolver.maxDepth(parenthesisInput);
+        System.out.println("Max Depth of Parenthesis brute force: " + depth);
+
+        parenthesisDepthProblemSolver = new ParenthesisDepthOptimalSolverImpl();
+        depth = parenthesisDepthProblemSolver.maxDepth(parenthesisInput);
+        System.out.println("Max Depth of Parenthesis optimal: " + depth);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
