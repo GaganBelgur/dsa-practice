@@ -1,4 +1,4 @@
-package test.java.com.gaganbelgur.dsa.recursion
+package test.java.com.gaganbelgur.dsa.recursion.generatebinarystrings
 
 import main.java.com.gaganbelgur.dsa.recursion.generatebinarystrings.BinaryStringsGeneratorProblemSolverInterface
 import main.java.com.gaganbelgur.dsa.recursion.generatebinarystrings.BinaryStringsSolverImpl
