@@ -24,6 +24,8 @@ import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisD
 import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisDepthProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueImpl;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueInterface;
+import main.java.com.gaganbelgur.dsa.strings.romannumerals.RomanNumeralsProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.strings.romannumerals.RomanNumeralsSolverImpl;
 
 import java.util.Arrays;
 import java.util.List;
@@ -116,6 +118,11 @@ public class MainClass {
         parenthesisDepthProblemSolver = new ParenthesisDepthOptimalSolverImpl();
         depth = parenthesisDepthProblemSolver.maxDepth(parenthesisInput);
         System.out.println("Max Depth of Parenthesis optimal: " + depth);
+
+        RomanNumeralsProblemSolverInterface roman = new RomanNumeralsSolverImpl();
+        String romanInput = "MCMXCIV";
+        int romanResult = roman.solve(romanInput);
+        System.out.println("Roman " + romanInput +" Numerals to Integer: " + romanResult);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
