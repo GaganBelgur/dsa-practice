@@ -24,6 +24,8 @@ import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisD
 import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisDepthProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueImpl;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueInterface;
+import main.java.com.gaganbelgur.dsa.strings.outerparenthesis.RemoveOuterParenthesisProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.strings.outerparenthesis.RemoveOuterParenthesisSolverImpl;
 import main.java.com.gaganbelgur.dsa.strings.romannumerals.RomanNumeralsProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.strings.romannumerals.RomanNumeralsSolverImpl;
 
@@ -123,6 +125,10 @@ public class MainClass {
         String romanInput = "MCMXCIV";
         int romanResult = roman.solve(romanInput);
         System.out.println("Roman " + romanInput +" Numerals to Integer: " + romanResult);
+
+        RemoveOuterParenthesisProblemSolverInterface removeOuterParenthesis = new RemoveOuterParenthesisSolverImpl();
+        String removedOuterParentheses = removeOuterParenthesis.removeOuterParentheses("()(()()())");
+        System.out.println("Removed Outer Parentheses: " + removedOuterParentheses);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
