@@ -24,6 +24,8 @@ import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisD
 import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisDepthProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueImpl;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueInterface;
+import main.java.com.gaganbelgur.dsa.strings.longestpalindromicsubstring.LongestPalindromicSubStringBruteForceSolverImpl;
+import main.java.com.gaganbelgur.dsa.strings.longestpalindromicsubstring.LongestPalindromicSubStringProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.strings.outerparenthesis.RemoveOuterParenthesisProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.strings.outerparenthesis.RemoveOuterParenthesisSolverImpl;
 import main.java.com.gaganbelgur.dsa.strings.romannumerals.RomanNumeralsProblemSolverInterface;
@@ -129,6 +131,11 @@ public class MainClass {
         RemoveOuterParenthesisProblemSolverInterface removeOuterParenthesis = new RemoveOuterParenthesisSolverImpl();
         String removedOuterParentheses = removeOuterParenthesis.removeOuterParentheses("()(()()())");
         System.out.println("Removed Outer Parentheses: " + removedOuterParentheses);
+
+        LongestPalindromicSubStringProblemSolverInterface bruteForceLongestPalindromicSolver = new LongestPalindromicSubStringBruteForceSolverImpl();
+        String longestPalindromicInput = "babad";
+        String longestPalindromicResult = bruteForceLongestPalindromicSolver.longestPalindrome(longestPalindromicInput);
+        System.out.println("Longest Palindromic Substring (Brute Force): " + longestPalindromicResult);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
