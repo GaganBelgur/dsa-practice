@@ -16,4 +16,11 @@ abstract class LongestPalindromicSubStringBaseTest {
         val actual = longestPalindromicSubStringProblemSolverInterface.longestPalindrome("babad")
         assertEquals(expected, actual)
     }
+
+    @Test
+    fun testLongestPalindromeForNumber() {
+        val expected = "12321"
+        val actual = longestPalindromicSubStringProblemSolverInterface.longestPalindrome("12321")
+        assertEquals(expected, actual)
+    }
 }
