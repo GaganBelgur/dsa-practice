@@ -25,6 +25,7 @@ import main.java.com.gaganbelgur.dsa.stackandqueue.parenthesisdepth.ParenthesisD
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueImpl;
 import main.java.com.gaganbelgur.dsa.stackandqueue.queuetostack.ImplementStackUsingQueueInterface;
 import main.java.com.gaganbelgur.dsa.strings.longestpalindromicsubstring.LongestPalindromicSubStringBruteForceSolverImpl;
+import main.java.com.gaganbelgur.dsa.strings.longestpalindromicsubstring.LongestPalindromicSubStringOptimalSolverImpl;
 import main.java.com.gaganbelgur.dsa.strings.longestpalindromicsubstring.LongestPalindromicSubStringProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.strings.outerparenthesis.RemoveOuterParenthesisProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.strings.outerparenthesis.RemoveOuterParenthesisSolverImpl;
@@ -136,6 +137,10 @@ public class MainClass {
         String longestPalindromicInput = "babad";
         String longestPalindromicResult = bruteForceLongestPalindromicSolver.longestPalindrome(longestPalindromicInput);
         System.out.println("Longest Palindromic Substring (Brute Force): " + longestPalindromicResult);
+
+        LongestPalindromicSubStringProblemSolverInterface optimalLongestPalindromicSolver = new LongestPalindromicSubStringOptimalSolverImpl();
+        String optimalLongestPalindromicResult = optimalLongestPalindromicSolver.longestPalindrome(longestPalindromicInput);
+        System.out.println("Longest Palindromic Substring (Optimal): " + optimalLongestPalindromicResult);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
