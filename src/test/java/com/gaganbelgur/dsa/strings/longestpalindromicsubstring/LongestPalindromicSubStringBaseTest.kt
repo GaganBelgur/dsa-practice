@@ -5,22 +5,19 @@ import org.junit.Assert.assertEquals
 import org.junit.Test
 
 abstract class LongestPalindromicSubStringBaseTest {
-
-    private val longestPalindromicSubStringProblemSolverInterface: LongestPalindromicSubStringProblemSolverInterface = getPalindromicSubStringSolver()
-
     abstract fun getPalindromicSubStringSolver(): LongestPalindromicSubStringProblemSolverInterface
 
     @Test
     fun testLongestPalindrome() {
         val expected = "bab"
-        val actual = longestPalindromicSubStringProblemSolverInterface.longestPalindrome("babad")
+        val actual = getPalindromicSubStringSolver().longestPalindrome("babad")
         assertEquals(expected, actual)
     }
 
     @Test
     fun testLongestPalindromeForNumber() {
         val expected = "12321"
-        val actual = longestPalindromicSubStringProblemSolverInterface.longestPalindrome("12321")
+        val actual = getPalindromicSubStringSolver().longestPalindrome("12321")
         assertEquals(expected, actual)
     }
 }
