@@ -1,5 +1,7 @@
 package main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type2;
 
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.StocksBuySellSolverInterface;
+
 import java.util.Arrays;
 
 public class StockBuySellSolverMemorizationApproachImpl implements StocksBuySellSolverInterface {

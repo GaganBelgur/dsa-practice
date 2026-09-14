@@ -1,5 +1,7 @@
 package main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type2;
 
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.StocksBuySellSolverInterface;
+
 public class StockBuySellSolverRecursionApproachImpl implements StocksBuySellSolverInterface {
     @Override
     public int stockBuySell(int[] arr, int n) {
