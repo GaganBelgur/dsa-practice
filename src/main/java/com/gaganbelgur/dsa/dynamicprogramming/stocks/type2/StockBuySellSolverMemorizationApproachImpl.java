@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks;
+package main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type2;
 
 import java.util.Arrays;
 
