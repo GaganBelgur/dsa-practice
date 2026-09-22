@@ -8,7 +8,7 @@ class StockBuySellMaxTwoTradeSolverMemorizationApproach: StocksBuySellSolverInte
     override fun stockBuySell(arr: IntArray, n: Int): Int {
         if (n == 0) return 0
 
-        val dp = Array<Array<IntArray>>(n) { Array(2) { IntArray(3) } }
+        val dp = Array(n) { Array(2) { IntArray(3) } }
 
         for (i in 0..<n) {
             for (j in 0..1) {
