@@ -14,10 +14,7 @@ public class StockBuySellSolverMemorizationApproachImpl implements StocksBuySell
             Arrays.fill(row, -1);
         }
 
-
-        int profit = buyStocks(0, 0, n, arr, dp);
-
-        return profit;
+        return buyStocks(0, 0, n, arr, dp);
     }
 
     private int buyStocks(int index, int buy, int n, int[] arr, int[][] dp) {
@@ -27,14 +24,14 @@ public class StockBuySellSolverMemorizationApproachImpl implements StocksBuySell
         int profit = 0;
 
         if(buy == 0) {
-            int bought = -1 * arr[index] + buyStocks(index + 1, 1, n, arr, dp);
-            int notBought = 0 + buyStocks(index + 1, 0, n, arr, dp);
+            int bought = -arr[index] + buyStocks(index + 1, 1, n, arr, dp);
+            int notBought = buyStocks(index + 1, 0, n, arr, dp);
             profit = Math.max(bought, notBought);
         }
 
         if(buy == 1) {
             int sell = arr[index] + buyStocks(index + 1, 0, n, arr, dp);
-            int notSell = 0 + buyStocks(index + 1, 1, n, arr, dp);
+            int notSell = buyStocks(index + 1, 1, n, arr, dp);
             profit = Math.max(sell, notSell);
         }
 
