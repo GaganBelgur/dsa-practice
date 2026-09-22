@@ -5,8 +5,8 @@ import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLonge
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBruteForceImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceOptimalApproachImpl;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.StocksBuySellSolverInterface;
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3.StockBuySellMaxTwoTradeSolverMemorizationApproach;
-import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3.StockBuySellMaxTwoTradeSolverRecursionApproach;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3max2stocks.StockBuySellMaxTwoTradeSolverMemorizationApproach;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3max2stocks.StockBuySellMaxTwoTradeSolverRecursionApproach;
 import main.java.com.gaganbelgur.dsa.recursion.atoi.ATOIProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.atoi.ATOISolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersProblemSolverInterface;
