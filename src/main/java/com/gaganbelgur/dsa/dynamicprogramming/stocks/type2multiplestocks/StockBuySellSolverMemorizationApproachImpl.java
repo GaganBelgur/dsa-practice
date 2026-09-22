@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type2;
+package main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type2multiplestocks;
 
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.StocksBuySellSolverInterface;
 
