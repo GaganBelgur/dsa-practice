@@ -1,4 +1,4 @@
-package main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3
+package main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3max2stocks
 
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.StocksBuySellSolverInterface
 import kotlin.math.max
