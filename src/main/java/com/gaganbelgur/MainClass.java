@@ -7,6 +7,7 @@ import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLonge
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.StocksBuySellSolverInterface;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3max2stocks.StockBuySellMaxTwoTradeSolverMemorizationApproach;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3max2stocks.StockBuySellMaxTwoTradeSolverRecursionApproach;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type4stockswithfee.StockBuySellStockWithFeeSolverRecursionApproach;
 import main.java.com.gaganbelgur.dsa.recursion.atoi.ATOIProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.recursion.atoi.ATOISolverImpl;
 import main.java.com.gaganbelgur.dsa.recursion.countgoodnumbers.CountGoodNumbersProblemSolverInterface;
@@ -153,6 +154,12 @@ public class MainClass {
         stockBuySellSolver = new StockBuySellMaxTwoTradeSolverMemorizationApproach();
         maxProfit = stockBuySellSolver.stockBuySell(stockPrices, stockPrices.length);
         System.out.println("Max Profit from Stock Buy Sell (Memorization): " + maxProfit);
+
+        StockBuySellStockWithFeeSolverRecursionApproach stockBuySellWithFeeSolver = new StockBuySellStockWithFeeSolverRecursionApproach();
+        int[] stockPricesWithFee = {1, 3, 4, 0, 2};
+        int fee = 1;
+        int maxProfitWithFee = stockBuySellWithFeeSolver.stockBuySell(stockPricesWithFee, stockPricesWithFee.length, fee);
+        System.out.println("Max Profit from Stock Buy Sell with Fee: " + maxProfitWithFee);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
