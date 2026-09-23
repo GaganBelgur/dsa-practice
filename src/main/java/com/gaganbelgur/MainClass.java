@@ -4,6 +4,8 @@ import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLonge
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBetterImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBruteForceImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceOptimalApproachImpl;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.knapsack.KnapsackProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.knapsack.KnapsackRecursionSolverImpl;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.StocksBuySellSolverInterface;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3max2stocks.StockBuySellMaxTwoTradeSolverMemorizationApproach;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.type3max2stocks.StockBuySellMaxTwoTradeSolverRecursionApproach;
@@ -160,6 +162,13 @@ public class MainClass {
         int fee = 1;
         int maxProfitWithFee = stockBuySellWithFeeSolver.stockBuySell(stockPricesWithFee, stockPricesWithFee.length, fee);
         System.out.println("Max Profit from Stock Buy Sell with Fee: " + maxProfitWithFee);
+
+        KnapsackProblemSolverInterface knapsackSolver = new KnapsackRecursionSolverImpl();
+        int[] weights = {10, 20, 30};
+        int[] values = {60, 100, 120};
+        int W = 50;
+        int maxKnapsackValue = knapsackSolver.knapsack(weights, values, weights.length, W);
+        System.out.println("Expected Output: 220, \n Actual Output: " + maxKnapsackValue);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
