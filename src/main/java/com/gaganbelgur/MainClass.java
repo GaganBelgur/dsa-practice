@@ -4,6 +4,9 @@ import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLonge
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBetterImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceInterfaceBruteForceImpl;
 import main.java.com.gaganbelgur.dsa.arrays.longestconsecutivesequence.FindLongestConsecutiveSequenceOptimalApproachImpl;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.coinchange.CoinChangeProblemSolverInterface;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.coinchange.CoinChangeSolverMemoizationImpl;
+import main.java.com.gaganbelgur.dsa.dynamicprogramming.coinchange.CoinChangeSolverRecursionImpl;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.knapsack.KnapsackProblemSolverInterface;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.knapsack.KnapsackRecursionSolverImpl;
 import main.java.com.gaganbelgur.dsa.dynamicprogramming.stocks.StocksBuySellSolverInterface;
@@ -169,6 +172,16 @@ public class MainClass {
         int W = 50;
         int maxKnapsackValue = knapsackSolver.knapsack(weights, values, weights.length, W);
         System.out.println("Expected Output: 220, \n Actual Output: " + maxKnapsackValue);
+
+        CoinChangeProblemSolverInterface coinChangeSolver = new CoinChangeSolverRecursionImpl();
+        int[] coins = {2,4,10};
+        int amount = 10;
+        int minCoins = coinChangeSolver.coinChange(coins, amount);
+        System.out.println("Recursion Approach: Expected Output: 4, \n Actual Output: " + minCoins);
+
+        coinChangeSolver = new CoinChangeSolverMemoizationImpl();
+        minCoins = coinChangeSolver.coinChange(coins, amount);
+        System.out.println("Memoization Approach: Expected Output: 4, \n Actual Output: " + minCoins);
     }
 
     private static void findLongestConsecutiveSequence(FindLongestConsecutiveSequenceInterface findLongestConsecutiveSequenceInterface) {
